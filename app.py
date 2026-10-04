@@ -177,7 +177,7 @@ async def process_user_query(query_text: str):
     # Step 1: Laya Decision Model
     async with cl.Step(name="🧠 Laya Decision Model (Apple Silicon MLX)", type="tool") as step1:
         step1.input = f"Evaluating intent & tool criteria for: '{query_text}'"
-        result = agent_service.run(query=query_text, mode=mode, model_name=model_name)
+        result = await agent_service.run_async(query=query_text, mode=mode, model_name=model_name)
         dec = result.laya_decision
 
         if dec:
