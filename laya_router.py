@@ -6,6 +6,7 @@ It replaces expensive LLM tool-routing overhead and uses 0 LLM API tokens.
 """
 
 import time
+import threading
 from typing import Dict, Any, Optional
 from dataclasses import dataclass, field
 import warnings
@@ -41,6 +42,7 @@ class LayaRouter:
     def __init__(self, model_name: str = "english"):
         self.model_name = model_name
         self.agent = None
+        self._lock = threading.Lock()
         self._initialize_model()
 
     def _initialize_model(self):
@@ -70,11 +72,15 @@ class LayaRouter:
         }
 
         t0 = time.perf_counter()
-        if self.agent is not None:
-            res = self.agent.system_one(user_query, questions)
-            t1 = time.perf_counter()
-            latency_ms = round((t1 - t0) * 1000.0, 2)
+        with self._lock:
+            if self.agent is not None:
+                res = self.agent.system_one(user_query, questions)
+            else:
+                res = None
+        t1 = time.perf_counter()
+        latency_ms = round((t1 - t0) * 1000.0, 2)
 
+        if res is not None:
             ans = res["answers"]["tool_decision"]
             raw_choice = ans.get("choice", "none")
             confidence = ans.get("confidence", 0.0)

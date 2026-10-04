@@ -9,6 +9,7 @@ import os
 import time
 import json
 import uuid
+import asyncio
 from typing import Dict, Any, Optional, List, Tuple
 from dataclasses import dataclass
 from datetime import datetime
@@ -18,6 +19,11 @@ from dotenv import load_dotenv
 
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage, SystemMessage
 from langchain_core.utils.function_calling import convert_to_openai_tool
+
+try:
+    from langchain_google_genai import ChatGoogleGenerativeAI
+except ImportError:
+    ChatGoogleGenerativeAI = None
 
 from tools import ALL_TOOLS, TOOLS_BY_NAME
 from laya_router import LayaRouter, LayaDecision
@@ -73,6 +79,14 @@ class AgentService:
         self.enc = tiktoken.get_encoding("cl100k_base")
         self._calculate_tool_schema_tokens()
 
+        # Production Client Caching & Pre-bound Tool Registry
+        self._chat_models: Dict[str, Any] = {}
+        self._baseline_models: Dict[str, Any] = {}
+        self._single_tool_models: Dict[Tuple[str, str], Any] = {}
+
+        if self.is_api_key_configured():
+            self._warmup_models("gemini-1.5-flash-8b")
+
     def _get_api_key(self) -> Optional[str]:
         return os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
 
@@ -90,14 +104,50 @@ class AgentService:
 
         self.all_tools_schema_tokens = sum(self.tool_tokens.values())
 
+    def _warmup_models(self, model_name: str = "gemini-1.5-flash-8b"):
+        """Pre-warms base model and binds all tools into memory lookup table at startup."""
+        base_llm = self.get_chat_model(model_name)
+        if base_llm is not None:
+            self.get_baseline_model(model_name)
+            for tool_name in TOOLS_BY_NAME:
+                self.get_single_tool_model(model_name, tool_name)
+
+    def get_chat_model(self, model_name: str = "gemini-1.5-flash-8b"):
+        """Returns cached singleton ChatGoogleGenerativeAI instance for given model."""
+        if model_name not in self._chat_models:
+            api_key = self._get_api_key()
+            if not api_key or ChatGoogleGenerativeAI is None:
+                return None
+            self._chat_models[model_name] = ChatGoogleGenerativeAI(
+                model=model_name,
+                google_api_key=api_key,
+                temperature=0.1,
+                max_retries=3,
+            )
+        return self._chat_models[model_name]
+
     def _get_chat_model(self, model_name: str = "gemini-1.5-flash-8b"):
-        from langchain_google_genai import ChatGoogleGenerativeAI
-        api_key = self._get_api_key()
-        return ChatGoogleGenerativeAI(
-            model=model_name,
-            google_api_key=api_key,
-            temperature=0.1,
-        )
+        """Alias for backwards compatibility."""
+        return self.get_chat_model(model_name)
+
+    def get_baseline_model(self, model_name: str = "gemini-1.5-flash-8b"):
+        """Returns cached singleton model with all 10 tools bound."""
+        if model_name not in self._baseline_models:
+            base_llm = self.get_chat_model(model_name)
+            if base_llm is None:
+                return None
+            self._baseline_models[model_name] = base_llm.bind_tools(ALL_TOOLS)
+        return self._baseline_models[model_name]
+
+    def get_single_tool_model(self, model_name: str, tool_name: str):
+        """Returns cached singleton model with ONLY the specific tool bound."""
+        key = (model_name, tool_name)
+        if key not in self._single_tool_models:
+            base_llm = self.get_chat_model(model_name)
+            if base_llm is None or tool_name not in TOOLS_BY_NAME:
+                return None
+            self._single_tool_models[key] = base_llm.bind_tools([TOOLS_BY_NAME[tool_name]])
+        return self._single_tool_models[key]
 
     # -------------------------------------------------------------------------
     # Baseline Execution (Without Laya: All 10 Tools Bound)
@@ -106,8 +156,9 @@ class AgentService:
         self, query: str, model_name: str
     ) -> Tuple[Optional[str], Dict[str, Any], Optional[str], str, TokenBreakdown, RouteLatencyBreakdown]:
         """Runs baseline using live Gemini Flash API with all 10 tools bound."""
-        llm = self._get_chat_model(model_name)
-        llm_with_tools = llm.bind_tools(ALL_TOOLS)
+        llm_with_tools = self.get_baseline_model(model_name)
+        if llm_with_tools is None:
+            raise RuntimeError(f"Could not initialize baseline model for {model_name}")
 
         t_total_start = time.perf_counter()
         messages = [
@@ -182,6 +233,84 @@ class AgentService:
             latency_breakdown,
         )
 
+    async def _run_baseline_live_async(
+        self, query: str, model_name: str
+    ) -> Tuple[Optional[str], Dict[str, Any], Optional[str], str, TokenBreakdown, RouteLatencyBreakdown]:
+        """Asynchronously runs baseline using live Gemini Flash API with all 10 tools bound."""
+        llm_with_tools = self.get_baseline_model(model_name)
+        if llm_with_tools is None:
+            raise RuntimeError(f"Could not initialize baseline model for {model_name}")
+
+        t_total_start = time.perf_counter()
+        messages = [
+            SystemMessage(content="You are an intelligent AI assistant. Use available tools when appropriate to answer user queries accurately."),
+            HumanMessage(content=query),
+        ]
+
+        t_r1_start = time.perf_counter()
+        res1 = await llm_with_tools.ainvoke(messages)
+        t_r1_end = time.perf_counter()
+        routing_ms = round((t_r1_end - t_r1_start) * 1000.0, 2)
+
+        prompt_tokens = res1.usage_metadata.get("input_tokens", 0) if res1.usage_metadata else 0
+        comp_tokens = res1.usage_metadata.get("output_tokens", 0) if res1.usage_metadata else 0
+
+        chosen_tool = None
+        tool_args = {}
+        tool_output = None
+        final_text = ""
+        tool_exec_ms = 0.0
+        synthesis_ms = 0.0
+
+        if res1.tool_calls:
+            first_call = res1.tool_calls[0]
+            chosen_tool = first_call["name"]
+            tool_args = first_call.get("args", {})
+
+            t_tool_start = time.perf_counter()
+            if chosen_tool in TOOLS_BY_NAME:
+                tool_instance = TOOLS_BY_NAME[chosen_tool]
+                tool_output = str(await asyncio.to_thread(tool_instance.invoke, tool_args))
+            else:
+                tool_output = f"Tool '{chosen_tool}' not recognized."
+            t_tool_end = time.perf_counter()
+            tool_exec_ms = round((t_tool_end - t_tool_start) * 1000.0, 2)
+
+            messages.append(res1)
+            messages.append(ToolMessage(content=tool_output, tool_call_id=first_call.get("id", "call_1")))
+
+            t_r2_start = time.perf_counter()
+            res2 = await llm_with_tools.ainvoke(messages)
+            t_r2_end = time.perf_counter()
+            synthesis_ms = round((t_r2_end - t_r2_start) * 1000.0, 2)
+
+            if res2.usage_metadata:
+                prompt_tokens += res2.usage_metadata.get("input_tokens", 0)
+                comp_tokens += res2.usage_metadata.get("output_tokens", 0)
+            final_text = str(res2.content)
+        else:
+            final_text = str(res1.content)
+
+        t_total_end = time.perf_counter()
+        total_ms = round((t_total_end - t_total_start) * 1000.0, 2)
+        total_tokens = prompt_tokens + comp_tokens
+
+        latency_breakdown = RouteLatencyBreakdown(
+            routing_ms=routing_ms,
+            tool_exec_ms=tool_exec_ms,
+            synthesis_ms=synthesis_ms,
+            total_ms=total_ms,
+        )
+
+        return (
+            chosen_tool,
+            tool_args,
+            tool_output,
+            final_text,
+            TokenBreakdown(prompt_tokens, comp_tokens, total_tokens),
+            latency_breakdown,
+        )
+
     # -------------------------------------------------------------------------
     # Laya-Routed Execution (With Laya: 0 or 1 Tool Bound)
     # -------------------------------------------------------------------------
@@ -189,7 +318,6 @@ class AgentService:
         self, query: str, model_name: str, laya_decision: LayaDecision
     ) -> Tuple[Optional[str], Dict[str, Any], Optional[str], str, TokenBreakdown, RouteLatencyBreakdown]:
         """Runs Laya-routed pipeline using live Gemini Flash API with only 0 or 1 tool bound."""
-        llm = self._get_chat_model(model_name)
         t_total_start = time.perf_counter()
 
         # Routing phase is handled by Laya locally in single forward pass
@@ -205,12 +333,16 @@ class AgentService:
 
         if not laya_decision.is_tool_needed or chosen_tool not in TOOLS_BY_NAME:
             # Case 1: No tool needed. Gemini is invoked with ZERO tools bound!
+            base_llm = self.get_chat_model(model_name)
+            if base_llm is None:
+                raise RuntimeError(f"Could not initialize model for {model_name}")
+
             messages = [
                 SystemMessage(content="You are a helpful and conversational AI assistant."),
                 HumanMessage(content=query),
             ]
             t_gen_start = time.perf_counter()
-            res = llm.invoke(messages)
+            res = base_llm.invoke(messages)
             t_gen_end = time.perf_counter()
             synthesis_ms = round((t_gen_end - t_gen_start) * 1000.0, 2)
 
@@ -221,7 +353,9 @@ class AgentService:
         else:
             # Case 2: Specific tool selected by Laya. Bind ONLY that 1 tool to Gemini!
             single_tool = TOOLS_BY_NAME[chosen_tool]
-            llm_with_single_tool = llm.bind_tools([single_tool])
+            llm_with_single_tool = self.get_single_tool_model(model_name, chosen_tool)
+            if llm_with_single_tool is None:
+                raise RuntimeError(f"Could not initialize single tool model for {chosen_tool}")
 
             messages = [
                 SystemMessage(content=f"You are an AI assistant. Extract parameters and invoke the '{chosen_tool}' tool to answer the user query accurately."),
@@ -266,6 +400,109 @@ class AgentService:
                 t_tool_start = time.perf_counter()
                 tool_args = {"query": query}
                 tool_output = str(single_tool.invoke(query))
+                t_tool_end = time.perf_counter()
+                tool_exec_ms = round((t_tool_end - t_tool_start) * 1000.0, 2)
+                synthesis_ms = param_extract_ms
+                final_text = f"According to the {chosen_tool} service:\n{tool_output}"
+
+        t_total_end = time.perf_counter()
+        total_ms = round(routing_ms + (t_total_end - t_total_start) * 1000.0, 2)
+        total_tokens = prompt_tokens + comp_tokens
+
+        latency_breakdown = RouteLatencyBreakdown(
+            routing_ms=routing_ms,
+            tool_exec_ms=tool_exec_ms,
+            synthesis_ms=synthesis_ms,
+            total_ms=total_ms,
+        )
+
+        return (
+            chosen_tool,
+            tool_args,
+            tool_output,
+            final_text,
+            TokenBreakdown(prompt_tokens, comp_tokens, total_tokens),
+            latency_breakdown,
+        )
+
+    async def _run_laya_live_async(
+        self, query: str, model_name: str, laya_decision: LayaDecision
+    ) -> Tuple[Optional[str], Dict[str, Any], Optional[str], str, TokenBreakdown, RouteLatencyBreakdown]:
+        """Asynchronously runs Laya-routed pipeline using live Gemini Flash API with only 0 or 1 tool bound."""
+        t_total_start = time.perf_counter()
+
+        routing_ms = laya_decision.latency_ms
+        chosen_tool = laya_decision.selected_tool
+        tool_args = {}
+        tool_output = None
+        prompt_tokens = 0
+        comp_tokens = 0
+        tool_exec_ms = 0.0
+        synthesis_ms = 0.0
+
+        if not laya_decision.is_tool_needed or chosen_tool not in TOOLS_BY_NAME:
+            base_llm = self.get_chat_model(model_name)
+            if base_llm is None:
+                raise RuntimeError(f"Could not initialize model for {model_name}")
+
+            messages = [
+                SystemMessage(content="You are a helpful and conversational AI assistant."),
+                HumanMessage(content=query),
+            ]
+            t_gen_start = time.perf_counter()
+            res = await base_llm.ainvoke(messages)
+            t_gen_end = time.perf_counter()
+            synthesis_ms = round((t_gen_end - t_gen_start) * 1000.0, 2)
+
+            if res.usage_metadata:
+                prompt_tokens = res.usage_metadata.get("input_tokens", 0)
+                comp_tokens = res.usage_metadata.get("output_tokens", 0)
+            final_text = str(res.content)
+        else:
+            single_tool = TOOLS_BY_NAME[chosen_tool]
+            llm_with_single_tool = self.get_single_tool_model(model_name, chosen_tool)
+            if llm_with_single_tool is None:
+                raise RuntimeError(f"Could not initialize single tool model for {chosen_tool}")
+
+            messages = [
+                SystemMessage(content=f"You are an AI assistant. Extract parameters and invoke the '{chosen_tool}' tool to answer the user query accurately."),
+                HumanMessage(content=query),
+            ]
+
+            t_param_start = time.perf_counter()
+            res1 = await llm_with_single_tool.ainvoke(messages)
+            t_param_end = time.perf_counter()
+            param_extract_ms = round((t_param_end - t_param_start) * 1000.0, 2)
+
+            if res1.usage_metadata:
+                prompt_tokens += res1.usage_metadata.get("input_tokens", 0)
+                comp_tokens += res1.usage_metadata.get("output_tokens", 0)
+
+            if res1.tool_calls:
+                first_call = res1.tool_calls[0]
+                tool_args = first_call.get("args", {})
+
+                t_tool_start = time.perf_counter()
+                tool_output = str(await asyncio.to_thread(single_tool.invoke, tool_args))
+                t_tool_end = time.perf_counter()
+                tool_exec_ms = round((t_tool_end - t_tool_start) * 1000.0, 2)
+
+                messages.append(res1)
+                messages.append(ToolMessage(content=tool_output, tool_call_id=first_call.get("id", "call_1")))
+
+                t_r2_start = time.perf_counter()
+                res2 = await llm_with_single_tool.ainvoke(messages)
+                t_r2_end = time.perf_counter()
+                synthesis_ms = round((t_r2_end - t_r2_start) * 1000.0, 2) + param_extract_ms
+
+                if res2.usage_metadata:
+                    prompt_tokens += res2.usage_metadata.get("input_tokens", 0)
+                    comp_tokens += res2.usage_metadata.get("output_tokens", 0)
+                final_text = str(res2.content)
+            else:
+                t_tool_start = time.perf_counter()
+                tool_args = {"query": query}
+                tool_output = str(await asyncio.to_thread(single_tool.invoke, query))
                 t_tool_end = time.perf_counter()
                 tool_exec_ms = round((t_tool_end - t_tool_start) * 1000.0, 2)
                 synthesis_ms = param_extract_ms
@@ -473,55 +710,29 @@ class AgentService:
         return {}
 
     # -------------------------------------------------------------------------
-    # Main Public Execution API
+    # Main Public Execution APIs (Sync & Async)
     # -------------------------------------------------------------------------
-    def run(
+    def _build_execution_result(
         self,
         query: str,
-        mode: str = "dual_benchmark",
-        model_name: str = "gemini-1.5-flash-8b",
+        mode: str,
+        model_name: str,
+        laya_decision: LayaDecision,
+        base_tool: Optional[str],
+        base_args: Dict[str, Any],
+        base_out: Optional[str],
+        base_text: str,
+        base_usage: TokenBreakdown,
+        base_lat: RouteLatencyBreakdown,
+        laya_tool_exec: Optional[str],
+        laya_args: Dict[str, Any],
+        laya_out: Optional[str],
+        laya_text: str,
+        laya_usage: TokenBreakdown,
+        laya_lat: RouteLatencyBreakdown,
+        t_start: float,
+        is_live: bool,
     ) -> ExecutionResult:
-        """Executes query according to selected mode: dual_benchmark, with_laya, or without_laya."""
-        is_live = self.is_api_key_configured()
-        t_start = time.perf_counter()
-
-        # Step 1: Always evaluate Laya Decision Model locally on Apple Silicon (MLX)
-        laya_decision = self.router.route_query(query)
-
-        # Baseline Execution
-        if is_live:
-            try:
-                base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_live(
-                    query, model_name
-                )
-            except Exception as e:
-                print(f"[AgentService] Live baseline error: {e}. Falling back to simulation.")
-                base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
-                    query, laya_decision
-                )
-                is_live = False
-        else:
-            base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
-                query, laya_decision
-            )
-
-        # Laya-Routed Execution
-        if is_live:
-            try:
-                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_live(
-                    query, model_name, laya_decision
-                )
-            except Exception as e:
-                print(f"[AgentService] Live Laya error: {e}. Falling back to simulation.")
-                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
-                    query, laya_decision
-                )
-                is_live = False
-        else:
-            laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
-                query, laya_decision
-            )
-
         t_end = time.perf_counter()
         total_execution_ms = round((t_end - t_start) * 1000.0, 2)
 
@@ -614,5 +825,140 @@ class AgentService:
             response_text=chosen_response,
         )
         self.tracker.record_experiment(rec)
-
         return result
+
+    def run(
+        self,
+        query: str,
+        mode: str = "dual_benchmark",
+        model_name: str = "gemini-1.5-flash-8b",
+    ) -> ExecutionResult:
+        """Executes query according to selected mode: dual_benchmark, with_laya, or without_laya."""
+        is_live = self.is_api_key_configured()
+        t_start = time.perf_counter()
+
+        # Step 1: Always evaluate Laya Decision Model locally on Apple Silicon (MLX)
+        laya_decision = self.router.route_query(query)
+
+        # Baseline Execution
+        if is_live:
+            try:
+                base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_live(
+                    query, model_name
+                )
+            except Exception as e:
+                print(f"[AgentService] Live baseline error: {e}. Falling back to simulation.")
+                base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
+                    query, laya_decision
+                )
+                is_live = False
+        else:
+            base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
+                query, laya_decision
+            )
+
+        # Laya-Routed Execution
+        if is_live:
+            try:
+                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_live(
+                    query, model_name, laya_decision
+                )
+            except Exception as e:
+                print(f"[AgentService] Live Laya error: {e}. Falling back to simulation.")
+                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
+                    query, laya_decision
+                )
+                is_live = False
+        else:
+            laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
+                query, laya_decision
+            )
+
+        return self._build_execution_result(
+            query=query,
+            mode=mode,
+            model_name=model_name,
+            laya_decision=laya_decision,
+            base_tool=base_tool,
+            base_args=base_args,
+            base_out=base_out,
+            base_text=base_text,
+            base_usage=base_usage,
+            base_lat=base_lat,
+            laya_tool_exec=laya_tool_exec,
+            laya_args=laya_args,
+            laya_out=laya_out,
+            laya_text=laya_text,
+            laya_usage=laya_usage,
+            laya_lat=laya_lat,
+            t_start=t_start,
+            is_live=is_live,
+        )
+
+    async def run_async(
+        self,
+        query: str,
+        mode: str = "dual_benchmark",
+        model_name: str = "gemini-1.5-flash-8b",
+    ) -> ExecutionResult:
+        """Asynchronously executes query without blocking web event loops."""
+        is_live = self.is_api_key_configured()
+        t_start = time.perf_counter()
+
+        # Step 1: Evaluate Laya in worker thread so event loop remains free
+        laya_decision = await asyncio.to_thread(self.router.route_query, query)
+
+        # Baseline Execution
+        if is_live:
+            try:
+                base_tool, base_args, base_out, base_text, base_usage, base_lat = await self._run_baseline_live_async(
+                    query, model_name
+                )
+            except Exception as e:
+                print(f"[AgentService] Live baseline async error: {e}. Falling back to simulation.")
+                base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
+                    query, laya_decision
+                )
+                is_live = False
+        else:
+            base_tool, base_args, base_out, base_text, base_usage, base_lat = self._run_baseline_simulated(
+                query, laya_decision
+            )
+
+        # Laya-Routed Execution
+        if is_live:
+            try:
+                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = await self._run_laya_live_async(
+                    query, model_name, laya_decision
+                )
+            except Exception as e:
+                print(f"[AgentService] Live Laya async error: {e}. Falling back to simulation.")
+                laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
+                    query, laya_decision
+                )
+                is_live = False
+        else:
+            laya_tool_exec, laya_args, laya_out, laya_text, laya_usage, laya_lat = self._run_laya_simulated(
+                query, laya_decision
+            )
+
+        return self._build_execution_result(
+            query=query,
+            mode=mode,
+            model_name=model_name,
+            laya_decision=laya_decision,
+            base_tool=base_tool,
+            base_args=base_args,
+            base_out=base_out,
+            base_text=base_text,
+            base_usage=base_usage,
+            base_lat=base_lat,
+            laya_tool_exec=laya_tool_exec,
+            laya_args=laya_args,
+            laya_out=laya_out,
+            laya_text=laya_text,
+            laya_usage=laya_usage,
+            laya_lat=laya_lat,
+            t_start=t_start,
+            is_live=is_live,
+        )
