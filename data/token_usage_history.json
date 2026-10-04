@@ -1,0 +1,4572 @@
+[
+  {
+    "id": "7cfe16b8",
+    "timestamp": "2026-10-04T00:32:55.691394",
+    "query": "What is 15% tip on a 120 dollar dinner bill?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9818,
+    "laya_latency_ms": 81.56,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 560.53,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3023,
+      "completion_tokens": 110,
+      "total_tokens": 3133
+    },
+    "laya_usage": {
+      "prompt_tokens": 355,
+      "completion_tokens": 100,
+      "total_tokens": 455
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 85.5,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 2.8e-05,
+    "cost_saved_usd": 0.000102,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 15% = 0.15",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 15% = 0.15"
+  },
+  {
+    "id": "301f9c3b",
+    "timestamp": "2026-10-04T00:33:00.364263",
+    "query": "Hello, how are you doing today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.8664,
+    "laya_latency_ms": 80.33,
+    "llm_tool": null,
+    "llm_latency_ms": 320.06,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "08f2adcb",
+    "timestamp": "2026-10-04T00:42:38.778636",
+    "query": "What is the weather in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.7469,
+    "laya_latency_ms": 455.61,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1471,
+      "completion_tokens": 55,
+      "total_tokens": 1526
+    },
+    "laya_usage": {
+      "prompt_tokens": 27,
+      "completion_tokens": 50,
+      "total_tokens": 77
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.0,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 455.61,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 601.6
+    },
+    "latency_saved_ms": 0.0,
+    "speedup_factor": 0.58,
+    "routing_speedup_factor": 0.8,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "9af9cd83",
+    "timestamp": "2026-10-04T00:43:17.017228",
+    "query": "warmup",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.7922,
+    "laya_latency_ms": 110.52,
+    "llm_tool": null,
+    "llm_latency_ms": 341.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 55,
+      "total_tokens": 1521
+    },
+    "laya_usage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 50,
+      "total_tokens": 72
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.3,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 8e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 341.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 341.5
+    },
+    "laya_latency": {
+      "routing_ms": 110.52,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 141.0,
+      "total_ms": 251.5
+    },
+    "latency_saved_ms": 90.0,
+    "speedup_factor": 1.36,
+    "routing_speedup_factor": 3.1,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "e625eecb",
+    "timestamp": "2026-10-04T00:43:17.118373",
+    "query": "What is the weather in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.7469,
+    "laya_latency_ms": 100.25,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1471,
+      "completion_tokens": 55,
+      "total_tokens": 1526
+    },
+    "laya_usage": {
+      "prompt_tokens": 27,
+      "completion_tokens": 50,
+      "total_tokens": 77
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.0,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 100.25,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 246.2
+    },
+    "latency_saved_ms": 102.8,
+    "speedup_factor": 1.42,
+    "routing_speedup_factor": 3.5,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "af11ff70",
+    "timestamp": "2026-10-04T00:43:23.243182",
+    "query": "What is the weather in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.7469,
+    "laya_latency_ms": 79.49,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1471,
+      "completion_tokens": 55,
+      "total_tokens": 1526
+    },
+    "laya_usage": {
+      "prompt_tokens": 27,
+      "completion_tokens": 50,
+      "total_tokens": 77
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.0,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 79.49,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 225.5
+    },
+    "latency_saved_ms": 123.5,
+    "speedup_factor": 1.55,
+    "routing_speedup_factor": 4.4,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "7e299772",
+    "timestamp": "2026-10-04T00:44:32.459054",
+    "query": "Convert 250 Euros to US Dollars",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 87.54,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 645.3,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3029,
+      "completion_tokens": 110,
+      "total_tokens": 3139
+    },
+    "laya_usage": {
+      "prompt_tokens": 505,
+      "completion_tokens": 100,
+      "total_tokens": 605
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 10.71,
+      "synthesis_ms": 285.6,
+      "total_ms": 645.3
+    },
+    "laya_latency": {
+      "routing_ms": 87.54,
+      "tool_exec_ms": 0.19,
+      "synthesis_ms": 206.0,
+      "total_ms": 293.7
+    },
+    "latency_saved_ms": 351.6,
+    "speedup_factor": 2.2,
+    "routing_speedup_factor": 4.0,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "b1751354",
+    "timestamp": "2026-10-04T00:51:34.634656",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of .50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 90.58,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 813.2,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3290,
+      "completion_tokens": 110,
+      "total_tokens": 3400
+    },
+    "laya_usage": {
+      "prompt_tokens": 754,
+      "completion_tokens": 100,
+      "total_tokens": 854
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.9,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 10.05,
+      "synthesis_ms": 331.2,
+      "total_ms": 813.2
+    },
+    "laya_latency": {
+      "routing_ms": 90.58,
+      "tool_exec_ms": 0.18,
+      "synthesis_ms": 234.5,
+      "total_ms": 325.3
+    },
+    "latency_saved_ms": 487.9,
+    "speedup_factor": 2.5,
+    "routing_speedup_factor": 5.2,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-341667\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-341667\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "444a9870",
+    "timestamp": "2026-10-04T00:51:34.708894",
+    "query": "Good morning People Operations team. My spouse and I are expecting our second child early next quarter around mid-November. I have been reviewing our internal intranet documentation and benefits handbook regarding parental leave eligibility for full-time senior engineering staff with over 3 years of service. Could you clarify the exact duration of our paid parental leave, whether it can be split into two separate blocks across the first calendar year, and how it impacts accrued annual PTO rollover?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.8291,
+    "laya_latency_ms": 73.42,
+    "llm_tool": null,
+    "llm_latency_ms": 457.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1556,
+      "completion_tokens": 55,
+      "total_tokens": 1611
+    },
+    "laya_usage": {
+      "prompt_tokens": 112,
+      "completion_tokens": 50,
+      "total_tokens": 162
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 89.9,
+    "baseline_cost_usd": 6.7e-05,
+    "laya_cost_usd": 1.2e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 457.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 457.0
+    },
+    "laya_latency": {
+      "routing_ms": 73.42,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 218.0,
+      "total_ms": 291.4
+    },
+    "latency_saved_ms": 165.6,
+    "speedup_factor": 1.57,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "b45a4d6f",
+    "timestamp": "2026-10-04T00:51:34.780493",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 69.77,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 782.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 336.0,
+      "total_ms": 782.8
+    },
+    "laya_latency": {
+      "routing_ms": 69.77,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 237.5,
+      "total_ms": 307.4
+    },
+    "latency_saved_ms": 475.4,
+    "speedup_factor": 2.55,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "667ac7b9",
+    "timestamp": "2026-10-04T00:51:34.852495",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9994,
+    "laya_latency_ms": 70.15,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 720.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 285.6,
+      "total_ms": 720.5
+    },
+    "laya_latency": {
+      "routing_ms": 70.15,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 206.0,
+      "total_ms": 276.3
+    },
+    "latency_saved_ms": 444.2,
+    "speedup_factor": 2.61,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "dc1673ef",
+    "timestamp": "2026-10-04T00:51:48.287266",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of .50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 96.58,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 808.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3290,
+      "completion_tokens": 110,
+      "total_tokens": 3400
+    },
+    "laya_usage": {
+      "prompt_tokens": 754,
+      "completion_tokens": 100,
+      "total_tokens": 854
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.9,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 5.56,
+      "synthesis_ms": 331.2,
+      "total_ms": 808.8
+    },
+    "laya_latency": {
+      "routing_ms": 96.58,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 234.5,
+      "total_ms": 331.2
+    },
+    "latency_saved_ms": 477.6,
+    "speedup_factor": 2.44,
+    "routing_speedup_factor": 4.9,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-429817\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-429817\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "afc3f3ed",
+    "timestamp": "2026-10-04T00:51:48.363736",
+    "query": "Good morning People Operations team. My spouse and I are expecting our second child early next quarter around mid-November. I have been reviewing our internal intranet documentation and benefits handbook regarding parental leave eligibility for full-time senior engineering staff with over 3 years of service. Could you clarify the exact duration of our paid parental leave, whether it can be split into two separate blocks across the first calendar year, and how it impacts accrued annual PTO rollover?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.8291,
+    "laya_latency_ms": 75.59,
+    "llm_tool": null,
+    "llm_latency_ms": 457.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1556,
+      "completion_tokens": 55,
+      "total_tokens": 1611
+    },
+    "laya_usage": {
+      "prompt_tokens": 112,
+      "completion_tokens": 50,
+      "total_tokens": 162
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 89.9,
+    "baseline_cost_usd": 6.7e-05,
+    "laya_cost_usd": 1.2e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 457.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 457.0
+    },
+    "laya_latency": {
+      "routing_ms": 75.59,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 218.0,
+      "total_ms": 293.6
+    },
+    "latency_saved_ms": 163.4,
+    "speedup_factor": 1.56,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "5dd18b33",
+    "timestamp": "2026-10-04T00:51:48.442127",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 76.28,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 783.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.55,
+      "synthesis_ms": 336.0,
+      "total_ms": 783.0
+    },
+    "laya_latency": {
+      "routing_ms": 76.28,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 237.5,
+      "total_ms": 313.9
+    },
+    "latency_saved_ms": 469.1,
+    "speedup_factor": 2.49,
+    "routing_speedup_factor": 5.9,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "1365d677",
+    "timestamp": "2026-10-04T00:51:48.526326",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9994,
+    "laya_latency_ms": 81.77,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 721.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.87,
+      "synthesis_ms": 285.6,
+      "total_ms": 721.0
+    },
+    "laya_latency": {
+      "routing_ms": 81.77,
+      "tool_exec_ms": 0.24,
+      "synthesis_ms": 206.0,
+      "total_ms": 288.0
+    },
+    "latency_saved_ms": 433.0,
+    "speedup_factor": 2.5,
+    "routing_speedup_factor": 5.3,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "5f169083",
+    "timestamp": "2026-10-04T00:51:48.597333",
+    "query": "We are preparing for the upcoming Q4 enterprise sales push and several regional distributors are asking for large allocations of the MacBook Pro 16 inch M3 units. Before we accept these non-refundable purchase orders, can you check the current available stock across our central fulfillment facilities, specifically Chicago, and verify if there are any pending restock shipments scheduled to arrive this month?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.9909,
+    "laya_latency_ms": 69.17,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 757.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 110,
+      "total_tokens": 3321
+    },
+    "laya_usage": {
+      "prompt_tokens": 635,
+      "completion_tokens": 100,
+      "total_tokens": 735
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 77.9,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 433.0,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 324.0,
+      "total_ms": 757.4
+    },
+    "laya_latency": {
+      "routing_ms": 69.17,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 230.0,
+      "total_ms": 299.3
+    },
+    "latency_saved_ms": 458.1,
+    "speedup_factor": 2.53,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-28628\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-28628\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "fe0b7375",
+    "timestamp": "2026-10-04T00:51:48.705726",
+    "query": "We just received an urgent inbound ticket from an individual claiming to be the Chief Technology Officer at Nexus Global. His email is listed as john.doe@example.com. Before I jump on a live Zoom call with him to address his concerns, could you pull up his full CRM account record, subscription tier, total lifetime spend, and identify who their assigned enterprise account manager is?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 0.9858,
+    "laya_latency_ms": 106.04,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 763.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3216,
+      "completion_tokens": 110,
+      "total_tokens": 3326
+    },
+    "laya_usage": {
+      "prompt_tokens": 542,
+      "completion_tokens": 100,
+      "total_tokens": 642
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.5e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.45,
+      "synthesis_ms": 328.0,
+      "total_ms": 763.0
+    },
+    "laya_latency": {
+      "routing_ms": 106.04,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 232.5,
+      "total_ms": 338.7
+    },
+    "latency_saved_ms": 424.3,
+    "speedup_factor": 2.25,
+    "routing_speedup_factor": 4.1,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "5085b9d0",
+    "timestamp": "2026-10-04T00:51:48.880977",
+    "query": "We just finished a team dinner with 8 colleagues at a downtown restaurant. The food subtotal was 432.50, and we need to calculate an 18% gratuity on that amount. Could you calculate what 18% tip on 432.50 is so we can finalize our expense report?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9541,
+    "laya_latency_ms": 173.27,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 675.2,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 110,
+      "total_tokens": 3224
+    },
+    "laya_usage": {
+      "prompt_tokens": 446,
+      "completion_tokens": 100,
+      "total_tokens": 546
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 83.1,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.2e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 407.5,
+      "tool_exec_ms": 0.48,
+      "synthesis_ms": 267.2,
+      "total_ms": 675.2
+    },
+    "laya_latency": {
+      "routing_ms": 173.27,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 194.5,
+      "total_ms": 367.9
+    },
+    "latency_saved_ms": 307.3,
+    "speedup_factor": 1.84,
+    "routing_speedup_factor": 2.4,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 8 = 8",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 8 = 8"
+  },
+  {
+    "id": "526429ee",
+    "timestamp": "2026-10-04T00:51:48.954179",
+    "query": "Good afternoon! I have been reflecting on our quarterly agent architecture reviews. We have been looking at how microservices communicate, whether we need dedicated API gateways, how cost optimization plays into production deployments, and how teams coordinate across frontend and backend. Just wanted to say hello and see what your thoughts are on general software engineering best practices for building scalable distributed systems.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9279,
+    "laya_latency_ms": 71.96,
+    "llm_tool": null,
+    "llm_latency_ms": 434.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1536,
+      "completion_tokens": 55,
+      "total_tokens": 1591
+    },
+    "laya_usage": {
+      "prompt_tokens": 92,
+      "completion_tokens": 50,
+      "total_tokens": 142
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 91.1,
+    "baseline_cost_usd": 6.6e-05,
+    "laya_cost_usd": 1.1e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 434.5
+    },
+    "laya_latency": {
+      "routing_ms": 71.96,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 203.0,
+      "total_ms": 275.0
+    },
+    "latency_saved_ms": 159.5,
+    "speedup_factor": 1.58,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "a84723f6",
+    "timestamp": "2026-10-04T00:53:08.330323",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of $189.50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 160.46,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 806.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3294,
+      "completion_tokens": 110,
+      "total_tokens": 3404
+    },
+    "laya_usage": {
+      "prompt_tokens": 758,
+      "completion_tokens": 100,
+      "total_tokens": 858
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.8,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 3.29,
+      "synthesis_ms": 331.2,
+      "total_ms": 806.5
+    },
+    "laya_latency": {
+      "routing_ms": 160.46,
+      "tool_exec_ms": 0.22,
+      "synthesis_ms": 234.5,
+      "total_ms": 395.2
+    },
+    "latency_saved_ms": 411.3,
+    "speedup_factor": 2.04,
+    "routing_speedup_factor": 2.9,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-566344\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-566344\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "2f55b623",
+    "timestamp": "2026-10-04T00:53:49.112376",
+    "query": "warmup",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9388,
+    "laya_latency_ms": 670.88,
+    "llm_tool": null,
+    "llm_latency_ms": 341.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 55,
+      "total_tokens": 1521
+    },
+    "laya_usage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 50,
+      "total_tokens": 72
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.3,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 8e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 341.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 341.5
+    },
+    "laya_latency": {
+      "routing_ms": 670.88,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 141.0,
+      "total_ms": 811.9
+    },
+    "latency_saved_ms": 0.0,
+    "speedup_factor": 0.42,
+    "routing_speedup_factor": 0.5,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "96467a98",
+    "timestamp": "2026-10-04T00:53:49.181392",
+    "query": "Calculate 15% tip on a  dinner bill",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.8384,
+    "laya_latency_ms": 67.26,
+    "llm_tool": null,
+    "llm_latency_ms": 350.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1474,
+      "completion_tokens": 55,
+      "total_tokens": 1529
+    },
+    "laya_usage": {
+      "prompt_tokens": 30,
+      "completion_tokens": 50,
+      "total_tokens": 80
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.8,
+    "baseline_cost_usd": 6.4e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 350.5
+    },
+    "laya_latency": {
+      "routing_ms": 67.26,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 147.0,
+      "total_ms": 214.3
+    },
+    "latency_saved_ms": 136.2,
+    "speedup_factor": 1.64,
+    "routing_speedup_factor": 5.2,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "183d1938",
+    "timestamp": "2026-10-04T00:53:49.255044",
+    "query": "Will it rain tomorrow in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "get_weather",
+    "laya_confidence": 0.689,
+    "laya_latency_ms": 56.49,
+    "llm_tool": "get_weather",
+    "llm_latency_ms": 655.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3036,
+      "completion_tokens": 110,
+      "total_tokens": 3146
+    },
+    "laya_usage": {
+      "prompt_tokens": 426,
+      "completion_tokens": 100,
+      "total_tokens": 526
+    },
+    "tokens_saved": 2620,
+    "savings_percentage": 83.3,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 15.32,
+      "synthesis_ms": 291.2,
+      "total_ms": 655.5
+    },
+    "laya_latency": {
+      "routing_ms": 56.49,
+      "tool_exec_ms": 0.18,
+      "synthesis_ms": 209.5,
+      "total_ms": 266.2
+    },
+    "latency_saved_ms": 389.3,
+    "speedup_factor": 2.46,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "get_weather",
+    "tool_output": "Weather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow.",
+    "response_text": "Here is the requested information:\n\nWeather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow."
+  },
+  {
+    "id": "2797d371",
+    "timestamp": "2026-10-04T00:53:49.311457",
+    "query": "What is the company parental leave policy?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.76,
+    "laya_latency_ms": 55.11,
+    "llm_tool": null,
+    "llm_latency_ms": 350.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 350.5
+    },
+    "laya_latency": {
+      "routing_ms": 55.11,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 147.0,
+      "total_ms": 202.1
+    },
+    "latency_saved_ms": 148.4,
+    "speedup_factor": 1.73,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "f1236796",
+    "timestamp": "2026-10-04T00:53:49.408844",
+    "query": "Where is my package for order #ORD-98214?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_order_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 94.58,
+    "llm_tool": "check_order_status",
+    "llm_latency_ms": 662.1,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 405,
+      "completion_tokens": 100,
+      "total_tokens": 505
+    },
+    "tokens_saved": 2676,
+    "savings_percentage": 84.1,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.39,
+      "synthesis_ms": 311.2,
+      "total_ms": 662.1
+    },
+    "laya_latency": {
+      "routing_ms": 94.58,
+      "tool_exec_ms": 0.19,
+      "synthesis_ms": 222.0,
+      "total_ms": 316.8
+    },
+    "latency_saved_ms": 345.3,
+    "speedup_factor": 2.09,
+    "routing_speedup_factor": 3.7,
+    "tool_executed": "check_order_status",
+    "tool_output": "Order Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-656572500)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required",
+    "response_text": "Here is the requested information:\n\nOrder Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-656572500)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required"
+  },
+  {
+    "id": "1be9aec0",
+    "timestamp": "2026-10-04T00:53:49.467972",
+    "query": "Has United Airlines flight UA412 landed yet?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 56.45,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 686.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3096,
+      "completion_tokens": 110,
+      "total_tokens": 3206
+    },
+    "laya_usage": {
+      "prompt_tokens": 432,
+      "completion_tokens": 100,
+      "total_tokens": 532
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 83.4,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 336.0,
+      "total_ms": 686.9
+    },
+    "laya_latency": {
+      "routing_ms": 56.45,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 237.5,
+      "total_ms": 294.1
+    },
+    "latency_saved_ms": 392.8,
+    "speedup_factor": 2.34,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "7b902b67",
+    "timestamp": "2026-10-04T00:53:49.525578",
+    "query": "How much is 250 Euros in US Dollars today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9999,
+    "laya_latency_ms": 55.5,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 639.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3037,
+      "completion_tokens": 110,
+      "total_tokens": 3147
+    },
+    "laya_usage": {
+      "prompt_tokens": 513,
+      "completion_tokens": 100,
+      "total_tokens": 613
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 80.5,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 353.5,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 285.6,
+      "total_ms": 639.5
+    },
+    "laya_latency": {
+      "routing_ms": 55.5,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 206.0,
+      "total_ms": 261.7
+    },
+    "latency_saved_ms": 377.8,
+    "speedup_factor": 2.44,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "12f61d15",
+    "timestamp": "2026-10-04T00:53:49.580836",
+    "query": "Do we have MacBook Pro 16 inch in Chicago warehouse?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.5997,
+    "laya_latency_ms": 53.17,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 679.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3087,
+      "completion_tokens": 110,
+      "total_tokens": 3197
+    },
+    "laya_usage": {
+      "prompt_tokens": 511,
+      "completion_tokens": 100,
+      "total_tokens": 611
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 80.9,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 324.0,
+      "total_ms": 679.4
+    },
+    "laya_latency": {
+      "routing_ms": 53.17,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 230.0,
+      "total_ms": 283.3
+    },
+    "latency_saved_ms": 396.1,
+    "speedup_factor": 2.4,
+    "routing_speedup_factor": 6.7,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-68739\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-68739\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "cd84e37d",
+    "timestamp": "2026-10-04T00:53:49.640436",
+    "query": "Can you look up customer record for john.doe@example.com?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.4,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 679.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3093,
+      "completion_tokens": 110,
+      "total_tokens": 3203
+    },
+    "laya_usage": {
+      "prompt_tokens": 419,
+      "completion_tokens": 100,
+      "total_tokens": 519
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 83.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 327.2,
+      "total_ms": 679.6
+    },
+    "laya_latency": {
+      "routing_ms": 57.4,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 232.0,
+      "total_ms": 289.6
+    },
+    "latency_saved_ms": 390.0,
+    "speedup_factor": 2.35,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "503a270c",
+    "timestamp": "2026-10-04T00:53:49.700266",
+    "query": "Please refund  for order #ORD-1234 because item was broken",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.64,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 685.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3100,
+      "completion_tokens": 110,
+      "total_tokens": 3210
+    },
+    "laya_usage": {
+      "prompt_tokens": 564,
+      "completion_tokens": 100,
+      "total_tokens": 664
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 79.3,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 353.5,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 331.2,
+      "total_ms": 685.0
+    },
+    "laya_latency": {
+      "routing_ms": 57.64,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 234.5,
+      "total_ms": 292.3
+    },
+    "latency_saved_ms": 392.7,
+    "speedup_factor": 2.34,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-609492\n- Order ID: ORD-1234\n- Amount Credited: $1,234.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-609492\n- Order ID: ORD-1234\n- Amount Credited: $1,234.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "8709d02a",
+    "timestamp": "2026-10-04T00:53:49.757521",
+    "query": "Send email to sarah@acme.com letting her know contract is signed",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "send_email_notification",
+    "laya_confidence": 0.9973,
+    "laya_latency_ms": 55.16,
+    "llm_tool": "send_email_notification",
+    "llm_latency_ms": 668.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3080,
+      "completion_tokens": 110,
+      "total_tokens": 3190
+    },
+    "laya_usage": {
+      "prompt_tokens": 488,
+      "completion_tokens": 100,
+      "total_tokens": 588
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.6,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 313.6,
+      "total_ms": 668.9
+    },
+    "laya_latency": {
+      "routing_ms": 55.16,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 223.5,
+      "total_ms": 278.8
+    },
+    "latency_saved_ms": 390.1,
+    "speedup_factor": 2.4,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "send_email_notification",
+    "tool_output": "Email Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay",
+    "response_text": "Here is the requested information:\n\nEmail Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay"
+  },
+  {
+    "id": "b7aba5c8",
+    "timestamp": "2026-10-04T00:53:49.813727",
+    "query": "Hello, how are you doing today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9953,
+    "laya_latency_ms": 54.8,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 54.8,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 200.8
+    },
+    "latency_saved_ms": 148.2,
+    "speedup_factor": 1.74,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "57baf9f5",
+    "timestamp": "2026-10-04T00:53:49.892387",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of .50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 76.24,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 803.7,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3290,
+      "completion_tokens": 110,
+      "total_tokens": 3400
+    },
+    "laya_usage": {
+      "prompt_tokens": 754,
+      "completion_tokens": 100,
+      "total_tokens": 854
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.9,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 0.48,
+      "synthesis_ms": 331.2,
+      "total_ms": 803.7
+    },
+    "laya_latency": {
+      "routing_ms": 76.24,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 234.5,
+      "total_ms": 310.9
+    },
+    "latency_saved_ms": 492.8,
+    "speedup_factor": 2.59,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-149467\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-149467\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "5f2a3363",
+    "timestamp": "2026-10-04T00:53:49.967969",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 73.11,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 782.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.34,
+      "synthesis_ms": 336.0,
+      "total_ms": 782.8
+    },
+    "laya_latency": {
+      "routing_ms": 73.11,
+      "tool_exec_ms": 0.3,
+      "synthesis_ms": 237.5,
+      "total_ms": 310.9
+    },
+    "latency_saved_ms": 471.9,
+    "speedup_factor": 2.52,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "ffb255e7",
+    "timestamp": "2026-10-04T00:53:50.043051",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9994,
+    "laya_latency_ms": 72.27,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 720.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 285.6,
+      "total_ms": 720.4
+    },
+    "laya_latency": {
+      "routing_ms": 72.27,
+      "tool_exec_ms": 0.21,
+      "synthesis_ms": 206.0,
+      "total_ms": 278.5
+    },
+    "latency_saved_ms": 441.9,
+    "speedup_factor": 2.59,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "3e485bd0",
+    "timestamp": "2026-10-04T00:53:50.114967",
+    "query": "We are preparing for the upcoming Q4 enterprise sales push and several regional distributors are asking for large allocations of the MacBook Pro 16 inch M3 units. Before we accept these non-refundable purchase orders, can you check the current available stock across our central fulfillment facilities, specifically Chicago, and verify if there are any pending restock shipments scheduled to arrive this month?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.9909,
+    "laya_latency_ms": 69.34,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 757.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 110,
+      "total_tokens": 3321
+    },
+    "laya_usage": {
+      "prompt_tokens": 635,
+      "completion_tokens": 100,
+      "total_tokens": 735
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 77.9,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 433.0,
+      "tool_exec_ms": 0.56,
+      "synthesis_ms": 324.0,
+      "total_ms": 757.6
+    },
+    "laya_latency": {
+      "routing_ms": 69.34,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 230.0,
+      "total_ms": 299.5
+    },
+    "latency_saved_ms": 458.1,
+    "speedup_factor": 2.53,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-68739\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-68739\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "7beb8924",
+    "timestamp": "2026-10-04T00:53:50.188287",
+    "query": "We just received an urgent inbound ticket from an individual claiming to be the Chief Technology Officer at Nexus Global. His email is listed as john.doe@example.com. Before I jump on a live Zoom call with him to address his concerns, could you pull up his full CRM account record, subscription tier, total lifetime spend, and identify who their assigned enterprise account manager is?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 0.9858,
+    "laya_latency_ms": 70.92,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 762.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3216,
+      "completion_tokens": 110,
+      "total_tokens": 3326
+    },
+    "laya_usage": {
+      "prompt_tokens": 542,
+      "completion_tokens": 100,
+      "total_tokens": 642
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.5e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 328.0,
+      "total_ms": 762.8
+    },
+    "laya_latency": {
+      "routing_ms": 70.92,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 232.5,
+      "total_ms": 303.6
+    },
+    "latency_saved_ms": 459.2,
+    "speedup_factor": 2.51,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "c8c72aa1",
+    "timestamp": "2026-10-04T00:53:50.253538",
+    "query": "We just finished a team dinner with 8 colleagues at a downtown restaurant. The food subtotal was 432.50, and we need to calculate an 18% gratuity on that amount. Could you calculate what 18% tip on 432.50 is so we can finalize our expense report?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9541,
+    "laya_latency_ms": 62.05,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 675.2,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 110,
+      "total_tokens": 3224
+    },
+    "laya_usage": {
+      "prompt_tokens": 446,
+      "completion_tokens": 100,
+      "total_tokens": 546
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 83.1,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.2e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 407.5,
+      "tool_exec_ms": 0.54,
+      "synthesis_ms": 267.2,
+      "total_ms": 675.2
+    },
+    "laya_latency": {
+      "routing_ms": 62.05,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 194.5,
+      "total_ms": 256.7
+    },
+    "latency_saved_ms": 418.5,
+    "speedup_factor": 2.63,
+    "routing_speedup_factor": 6.6,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 8 = 8",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 8 = 8"
+  },
+  {
+    "id": "7cfd21e3",
+    "timestamp": "2026-10-04T00:53:50.316231",
+    "query": "Good morning HR team. My spouse and I are expecting our second child in November. Could you search our company knowledge base to verify the exact paid parental leave policy duration and whether it can be taken in split blocks across the year?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.9802,
+    "laya_latency_ms": 60.05,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 717.7,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3141,
+      "completion_tokens": 110,
+      "total_tokens": 3251
+    },
+    "laya_usage": {
+      "prompt_tokens": 549,
+      "completion_tokens": 100,
+      "total_tokens": 649
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 80.0,
+    "baseline_cost_usd": 0.000134,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 404.5,
+      "tool_exec_ms": 0.44,
+      "synthesis_ms": 312.8,
+      "total_ms": 717.7
+    },
+    "laya_latency": {
+      "routing_ms": 60.05,
+      "tool_exec_ms": 0.29,
+      "synthesis_ms": 223.0,
+      "total_ms": 283.3
+    },
+    "latency_saved_ms": 434.4,
+    "speedup_factor": 2.53,
+    "routing_speedup_factor": 6.7,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "d185f133",
+    "timestamp": "2026-10-04T00:53:50.387676",
+    "query": "Good afternoon! I have been reflecting on our quarterly agent architecture reviews. We have been looking at how microservices communicate, whether we need dedicated API gateways, how cost optimization plays into production deployments, and how teams coordinate across frontend and backend. Just wanted to say hello and see what your thoughts are on general software engineering best practices for building scalable distributed systems.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9279,
+    "laya_latency_ms": 69.47,
+    "llm_tool": null,
+    "llm_latency_ms": 434.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1536,
+      "completion_tokens": 55,
+      "total_tokens": 1591
+    },
+    "laya_usage": {
+      "prompt_tokens": 92,
+      "completion_tokens": 50,
+      "total_tokens": 142
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 91.1,
+    "baseline_cost_usd": 6.6e-05,
+    "laya_cost_usd": 1.1e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 434.5
+    },
+    "laya_latency": {
+      "routing_ms": 69.47,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 203.0,
+      "total_ms": 272.5
+    },
+    "latency_saved_ms": 162.0,
+    "speedup_factor": 1.59,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "f808355f",
+    "timestamp": "2026-10-04T00:54:45.418869",
+    "query": "warmup",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9388,
+    "laya_latency_ms": 218.89,
+    "llm_tool": null,
+    "llm_latency_ms": 341.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 55,
+      "total_tokens": 1521
+    },
+    "laya_usage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 50,
+      "total_tokens": 72
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.3,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 8e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 341.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 341.5
+    },
+    "laya_latency": {
+      "routing_ms": 218.89,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 141.0,
+      "total_ms": 359.9
+    },
+    "latency_saved_ms": 0.0,
+    "speedup_factor": 0.95,
+    "routing_speedup_factor": 1.6,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "c742f27f",
+    "timestamp": "2026-10-04T00:54:45.483440",
+    "query": "Calculate 15% tip on a $120 dinner bill",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.6896,
+    "laya_latency_ms": 62.8,
+    "llm_tool": null,
+    "llm_latency_ms": 352.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1475,
+      "completion_tokens": 55,
+      "total_tokens": 1530
+    },
+    "laya_usage": {
+      "prompt_tokens": 31,
+      "completion_tokens": 50,
+      "total_tokens": 81
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.7,
+    "baseline_cost_usd": 6.4e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 352.0
+    },
+    "laya_latency": {
+      "routing_ms": 62.8,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 148.0,
+      "total_ms": 210.8
+    },
+    "latency_saved_ms": 141.2,
+    "speedup_factor": 1.67,
+    "routing_speedup_factor": 5.6,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "afb9ba91",
+    "timestamp": "2026-10-04T00:54:45.581031",
+    "query": "Will it rain tomorrow in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "get_weather",
+    "laya_confidence": 0.689,
+    "laya_latency_ms": 53.64,
+    "llm_tool": "get_weather",
+    "llm_latency_ms": 682.1,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3036,
+      "completion_tokens": 110,
+      "total_tokens": 3146
+    },
+    "laya_usage": {
+      "prompt_tokens": 426,
+      "completion_tokens": 100,
+      "total_tokens": 526
+    },
+    "tokens_saved": 2620,
+    "savings_percentage": 83.3,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 41.87,
+      "synthesis_ms": 291.2,
+      "total_ms": 682.1
+    },
+    "laya_latency": {
+      "routing_ms": 53.64,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 209.5,
+      "total_ms": 263.3
+    },
+    "latency_saved_ms": 418.8,
+    "speedup_factor": 2.59,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "get_weather",
+    "tool_output": "Weather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow.",
+    "response_text": "Here is the requested information:\n\nWeather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow."
+  },
+  {
+    "id": "55e12924",
+    "timestamp": "2026-10-04T00:54:45.637622",
+    "query": "Please search our internal knowledge base for company parental leave policy",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.9997,
+    "laya_latency_ms": 53.87,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 669.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 479,
+      "completion_tokens": 100,
+      "total_tokens": 579
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 356.5,
+      "tool_exec_ms": 0.45,
+      "synthesis_ms": 312.8,
+      "total_ms": 669.8
+    },
+    "laya_latency": {
+      "routing_ms": 53.87,
+      "tool_exec_ms": 0.19,
+      "synthesis_ms": 223.0,
+      "total_ms": 277.1
+    },
+    "latency_saved_ms": 392.7,
+    "speedup_factor": 2.42,
+    "routing_speedup_factor": 6.6,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "fccc888f",
+    "timestamp": "2026-10-04T00:54:45.696742",
+    "query": "Where is my package for order #ORD-98214?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_order_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 56.74,
+    "llm_tool": "check_order_status",
+    "llm_latency_ms": 662.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 405,
+      "completion_tokens": 100,
+      "total_tokens": 505
+    },
+    "tokens_saved": 2676,
+    "savings_percentage": 84.1,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 311.2,
+      "total_ms": 662.0
+    },
+    "laya_latency": {
+      "routing_ms": 56.74,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 222.0,
+      "total_ms": 278.9
+    },
+    "latency_saved_ms": 383.1,
+    "speedup_factor": 2.37,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_order_status",
+    "tool_output": "Order Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-770912578)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required",
+    "response_text": "Here is the requested information:\n\nOrder Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-770912578)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required"
+  },
+  {
+    "id": "e5304ee3",
+    "timestamp": "2026-10-04T00:54:45.766503",
+    "query": "Has United Airlines flight UA412 landed yet?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.48,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 686.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3096,
+      "completion_tokens": 110,
+      "total_tokens": 3206
+    },
+    "laya_usage": {
+      "prompt_tokens": 432,
+      "completion_tokens": 100,
+      "total_tokens": 532
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 83.4,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 336.0,
+      "total_ms": 686.8
+    },
+    "laya_latency": {
+      "routing_ms": 57.48,
+      "tool_exec_ms": 0.13,
+      "synthesis_ms": 237.5,
+      "total_ms": 295.1
+    },
+    "latency_saved_ms": 391.7,
+    "speedup_factor": 2.33,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "c7da873b",
+    "timestamp": "2026-10-04T00:54:45.822542",
+    "query": "How much is 250 Euros in US Dollars today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9999,
+    "laya_latency_ms": 53.34,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 639.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3037,
+      "completion_tokens": 110,
+      "total_tokens": 3147
+    },
+    "laya_usage": {
+      "prompt_tokens": 513,
+      "completion_tokens": 100,
+      "total_tokens": 613
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 80.5,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 353.5,
+      "tool_exec_ms": 0.34,
+      "synthesis_ms": 285.6,
+      "total_ms": 639.4
+    },
+    "laya_latency": {
+      "routing_ms": 53.34,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 206.0,
+      "total_ms": 259.7
+    },
+    "latency_saved_ms": 379.7,
+    "speedup_factor": 2.46,
+    "routing_speedup_factor": 6.6,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "2fe2493a",
+    "timestamp": "2026-10-04T00:54:45.882643",
+    "query": "Do we have MacBook Pro 16 inch in Chicago warehouse?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.5997,
+    "laya_latency_ms": 57.6,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 679.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3087,
+      "completion_tokens": 110,
+      "total_tokens": 3197
+    },
+    "laya_usage": {
+      "prompt_tokens": 511,
+      "completion_tokens": 100,
+      "total_tokens": 611
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 80.9,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.39,
+      "synthesis_ms": 324.0,
+      "total_ms": 679.4
+    },
+    "laya_latency": {
+      "routing_ms": 57.6,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 230.0,
+      "total_ms": 287.8
+    },
+    "latency_saved_ms": 391.6,
+    "speedup_factor": 2.36,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-44778\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-44778\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "461a0457",
+    "timestamp": "2026-10-04T00:54:45.940201",
+    "query": "Can you look up customer record for john.doe@example.com?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 54.6,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 679.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3093,
+      "completion_tokens": 110,
+      "total_tokens": 3203
+    },
+    "laya_usage": {
+      "prompt_tokens": 419,
+      "completion_tokens": 100,
+      "total_tokens": 519
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 83.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 0.38,
+      "synthesis_ms": 327.2,
+      "total_ms": 679.6
+    },
+    "laya_latency": {
+      "routing_ms": 54.6,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 232.0,
+      "total_ms": 286.8
+    },
+    "latency_saved_ms": 392.8,
+    "speedup_factor": 2.37,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "88a8e939",
+    "timestamp": "2026-10-04T00:54:46.000641",
+    "query": "Please refund $45 for order #ORD-1234 because item was broken",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.75,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 684.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3100,
+      "completion_tokens": 110,
+      "total_tokens": 3210
+    },
+    "laya_usage": {
+      "prompt_tokens": 564,
+      "completion_tokens": 100,
+      "total_tokens": 664
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 79.3,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 329.6,
+      "total_ms": 684.9
+    },
+    "laya_latency": {
+      "routing_ms": 57.75,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 233.5,
+      "total_ms": 291.4
+    },
+    "latency_saved_ms": 393.5,
+    "speedup_factor": 2.35,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-591436\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-591436\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "75a857d0",
+    "timestamp": "2026-10-04T00:54:46.058009",
+    "query": "Send email to sarah@acme.com letting her know contract is signed",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "send_email_notification",
+    "laya_confidence": 0.9973,
+    "laya_latency_ms": 54.49,
+    "llm_tool": "send_email_notification",
+    "llm_latency_ms": 669.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3080,
+      "completion_tokens": 110,
+      "total_tokens": 3190
+    },
+    "laya_usage": {
+      "prompt_tokens": 488,
+      "completion_tokens": 100,
+      "total_tokens": 588
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.6,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 313.6,
+      "total_ms": 669.0
+    },
+    "laya_latency": {
+      "routing_ms": 54.49,
+      "tool_exec_ms": 0.27,
+      "synthesis_ms": 223.5,
+      "total_ms": 278.3
+    },
+    "latency_saved_ms": 390.7,
+    "speedup_factor": 2.4,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "send_email_notification",
+    "tool_output": "Email Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay",
+    "response_text": "Here is the requested information:\n\nEmail Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay"
+  },
+  {
+    "id": "ca9442e0",
+    "timestamp": "2026-10-04T00:54:46.115500",
+    "query": "Hello, how are you doing today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9953,
+    "laya_latency_ms": 55.56,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 55.56,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 201.6
+    },
+    "latency_saved_ms": 147.4,
+    "speedup_factor": 1.73,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "c9346637",
+    "timestamp": "2026-10-04T00:54:46.193505",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of $189.50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 75.21,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 803.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3294,
+      "completion_tokens": 110,
+      "total_tokens": 3404
+    },
+    "laya_usage": {
+      "prompt_tokens": 758,
+      "completion_tokens": 100,
+      "total_tokens": 858
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.8,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 331.2,
+      "total_ms": 803.5
+    },
+    "laya_latency": {
+      "routing_ms": 75.21,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 234.5,
+      "total_ms": 309.9
+    },
+    "latency_saved_ms": 493.6,
+    "speedup_factor": 2.59,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-654202\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-654202\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "1d9b0f16",
+    "timestamp": "2026-10-04T00:54:46.266684",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 69.67,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 782.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.43,
+      "synthesis_ms": 336.0,
+      "total_ms": 782.9
+    },
+    "laya_latency": {
+      "routing_ms": 69.67,
+      "tool_exec_ms": 0.27,
+      "synthesis_ms": 237.5,
+      "total_ms": 307.4
+    },
+    "latency_saved_ms": 475.5,
+    "speedup_factor": 2.55,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "d3e7ad4a",
+    "timestamp": "2026-10-04T00:54:46.341530",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9994,
+    "laya_latency_ms": 71.97,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 720.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.37,
+      "synthesis_ms": 285.6,
+      "total_ms": 720.5
+    },
+    "laya_latency": {
+      "routing_ms": 71.97,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 206.0,
+      "total_ms": 278.1
+    },
+    "latency_saved_ms": 442.4,
+    "speedup_factor": 2.59,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "c1749f9d",
+    "timestamp": "2026-10-04T00:54:46.413809",
+    "query": "We are preparing for the upcoming Q4 enterprise sales push and several regional distributors are asking for large allocations of the MacBook Pro 16 inch M3 units. Before we accept these non-refundable purchase orders, can you check the current available stock across our central fulfillment facilities, specifically Chicago, and verify if there are any pending restock shipments scheduled to arrive this month?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.9909,
+    "laya_latency_ms": 69.53,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 757.3,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 110,
+      "total_tokens": 3321
+    },
+    "laya_usage": {
+      "prompt_tokens": 635,
+      "completion_tokens": 100,
+      "total_tokens": 735
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 77.9,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 433.0,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 324.0,
+      "total_ms": 757.3
+    },
+    "laya_latency": {
+      "routing_ms": 69.53,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 230.0,
+      "total_ms": 299.7
+    },
+    "latency_saved_ms": 457.6,
+    "speedup_factor": 2.53,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-44778\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-44778\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "3029a112",
+    "timestamp": "2026-10-04T00:54:46.487512",
+    "query": "We just received an urgent inbound ticket from an individual claiming to be the Chief Technology Officer at Nexus Global. His email is listed as john.doe@example.com. Before I jump on a live Zoom call with him to address his concerns, could you pull up his full CRM account record, subscription tier, total lifetime spend, and identify who their assigned enterprise account manager is?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 0.9858,
+    "laya_latency_ms": 69.85,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 762.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3216,
+      "completion_tokens": 110,
+      "total_tokens": 3326
+    },
+    "laya_usage": {
+      "prompt_tokens": 542,
+      "completion_tokens": 100,
+      "total_tokens": 642
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.5e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.31,
+      "synthesis_ms": 328.0,
+      "total_ms": 762.8
+    },
+    "laya_latency": {
+      "routing_ms": 69.85,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 232.5,
+      "total_ms": 302.5
+    },
+    "latency_saved_ms": 460.3,
+    "speedup_factor": 2.52,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "6d87ad24",
+    "timestamp": "2026-10-04T00:54:46.906247",
+    "query": "We just finished a team dinner with 8 colleagues at a downtown restaurant. The food subtotal was $432.50, and we need to calculate an 18% gratuity on that amount. Could you calculate what 18% tip on $432.50 is so we can finalize our expense report?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9761,
+    "laya_latency_ms": 415.62,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 675.1,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 110,
+      "total_tokens": 3224
+    },
+    "laya_usage": {
+      "prompt_tokens": 446,
+      "completion_tokens": 100,
+      "total_tokens": 546
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 83.1,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.2e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 407.5,
+      "tool_exec_ms": 0.44,
+      "synthesis_ms": 267.2,
+      "total_ms": 675.1
+    },
+    "laya_latency": {
+      "routing_ms": 415.62,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 194.5,
+      "total_ms": 610.3
+    },
+    "latency_saved_ms": 64.8,
+    "speedup_factor": 1.11,
+    "routing_speedup_factor": 1.0,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 8 = 8",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 8 = 8"
+  },
+  {
+    "id": "2ef6088a",
+    "timestamp": "2026-10-04T00:54:46.966775",
+    "query": "Good morning HR team. My spouse and I are expecting our second child in November. Could you search our company knowledge base to verify the exact paid parental leave policy duration and whether it can be taken in split blocks across the year?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.9802,
+    "laya_latency_ms": 57.57,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 717.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3141,
+      "completion_tokens": 110,
+      "total_tokens": 3251
+    },
+    "laya_usage": {
+      "prompt_tokens": 549,
+      "completion_tokens": 100,
+      "total_tokens": 649
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 80.0,
+    "baseline_cost_usd": 0.000134,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 404.5,
+      "tool_exec_ms": 0.3,
+      "synthesis_ms": 312.8,
+      "total_ms": 717.6
+    },
+    "laya_latency": {
+      "routing_ms": 57.57,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 223.0,
+      "total_ms": 280.7
+    },
+    "latency_saved_ms": 436.9,
+    "speedup_factor": 2.56,
+    "routing_speedup_factor": 7.0,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "73efb107",
+    "timestamp": "2026-10-04T00:54:47.040854",
+    "query": "Good afternoon! I have been reflecting on our quarterly agent architecture reviews. We have been looking at how microservices communicate, whether we need dedicated API gateways, how cost optimization plays into production deployments, and how teams coordinate across frontend and backend. Just wanted to say hello and see what your thoughts are on general software engineering best practices for building scalable distributed systems.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9279,
+    "laya_latency_ms": 71.78,
+    "llm_tool": null,
+    "llm_latency_ms": 434.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1536,
+      "completion_tokens": 55,
+      "total_tokens": 1591
+    },
+    "laya_usage": {
+      "prompt_tokens": 92,
+      "completion_tokens": 50,
+      "total_tokens": 142
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 91.1,
+    "baseline_cost_usd": 6.6e-05,
+    "laya_cost_usd": 1.1e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 434.5
+    },
+    "laya_latency": {
+      "routing_ms": 71.78,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 203.0,
+      "total_ms": 274.8
+    },
+    "latency_saved_ms": 159.7,
+    "speedup_factor": 1.58,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "2110f319",
+    "timestamp": "2026-10-04T00:55:17.047805",
+    "query": "warmup",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9404,
+    "laya_latency_ms": 71.85,
+    "llm_tool": null,
+    "llm_latency_ms": 341.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 55,
+      "total_tokens": 1521
+    },
+    "laya_usage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 50,
+      "total_tokens": 72
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.3,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 8e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 341.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 341.5
+    },
+    "laya_latency": {
+      "routing_ms": 71.85,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 141.0,
+      "total_ms": 212.8
+    },
+    "latency_saved_ms": 128.7,
+    "speedup_factor": 1.6,
+    "routing_speedup_factor": 4.8,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "d76b61a7",
+    "timestamp": "2026-10-04T00:55:17.112630",
+    "query": "Calculate 15% tip on a $120 dinner bill",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9878,
+    "laya_latency_ms": 55.67,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 627.7,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3017,
+      "completion_tokens": 110,
+      "total_tokens": 3127
+    },
+    "laya_usage": {
+      "prompt_tokens": 349,
+      "completion_tokens": 100,
+      "total_tokens": 449
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 85.6,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 2.8e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 6.1,
+      "synthesis_ms": 269.6,
+      "total_ms": 627.7
+    },
+    "laya_latency": {
+      "routing_ms": 55.67,
+      "tool_exec_ms": 0.37,
+      "synthesis_ms": 196.0,
+      "total_ms": 252.0
+    },
+    "latency_saved_ms": 375.7,
+    "speedup_factor": 2.49,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 15% = 0.15",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 15% = 0.15"
+  },
+  {
+    "id": "b4941449",
+    "timestamp": "2026-10-04T00:55:17.168382",
+    "query": "Will it rain tomorrow in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.679,
+    "laya_latency_ms": 53.33,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1471,
+      "completion_tokens": 55,
+      "total_tokens": 1526
+    },
+    "laya_usage": {
+      "prompt_tokens": 27,
+      "completion_tokens": 50,
+      "total_tokens": 77
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.0,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 53.33,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 199.3
+    },
+    "latency_saved_ms": 149.7,
+    "speedup_factor": 1.75,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "0bd49c2a",
+    "timestamp": "2026-10-04T00:55:17.226812",
+    "query": "Please search our internal knowledge base for company parental leave policy",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.9995,
+    "laya_latency_ms": 55.45,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 669.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 479,
+      "completion_tokens": 100,
+      "total_tokens": 579
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 356.5,
+      "tool_exec_ms": 0.34,
+      "synthesis_ms": 312.8,
+      "total_ms": 669.6
+    },
+    "laya_latency": {
+      "routing_ms": 55.45,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 223.0,
+      "total_ms": 278.6
+    },
+    "latency_saved_ms": 391.0,
+    "speedup_factor": 2.4,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "771fb03f",
+    "timestamp": "2026-10-04T00:55:17.285334",
+    "query": "Where is my package for order #ORD-98214?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_order_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 54.99,
+    "llm_tool": "check_order_status",
+    "llm_latency_ms": 662.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 405,
+      "completion_tokens": 100,
+      "total_tokens": 505
+    },
+    "tokens_saved": 2676,
+    "savings_percentage": 84.1,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 311.2,
+      "total_ms": 662.0
+    },
+    "laya_latency": {
+      "routing_ms": 54.99,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 222.0,
+      "total_ms": 277.1
+    },
+    "latency_saved_ms": 384.9,
+    "speedup_factor": 2.39,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "check_order_status",
+    "tool_output": "Order Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-856811359)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required",
+    "response_text": "Here is the requested information:\n\nOrder Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-856811359)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required"
+  },
+  {
+    "id": "5d957013",
+    "timestamp": "2026-10-04T00:55:17.342322",
+    "query": "Has United Airlines flight UA412 landed yet?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 53.67,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 686.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3096,
+      "completion_tokens": 110,
+      "total_tokens": 3206
+    },
+    "laya_usage": {
+      "prompt_tokens": 432,
+      "completion_tokens": 100,
+      "total_tokens": 532
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 83.4,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.3,
+      "synthesis_ms": 336.0,
+      "total_ms": 686.8
+    },
+    "laya_latency": {
+      "routing_ms": 53.67,
+      "tool_exec_ms": 0.13,
+      "synthesis_ms": 237.5,
+      "total_ms": 291.3
+    },
+    "latency_saved_ms": 395.5,
+    "speedup_factor": 2.36,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "faade906",
+    "timestamp": "2026-10-04T00:55:17.400611",
+    "query": "How much is 250 Euros in US Dollars today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 55.16,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 639.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3037,
+      "completion_tokens": 110,
+      "total_tokens": 3147
+    },
+    "laya_usage": {
+      "prompt_tokens": 513,
+      "completion_tokens": 100,
+      "total_tokens": 613
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 80.5,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 353.5,
+      "tool_exec_ms": 0.34,
+      "synthesis_ms": 285.6,
+      "total_ms": 639.4
+    },
+    "laya_latency": {
+      "routing_ms": 55.16,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 206.0,
+      "total_ms": 261.3
+    },
+    "latency_saved_ms": 378.1,
+    "speedup_factor": 2.45,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "35a87eb4",
+    "timestamp": "2026-10-04T00:55:17.456666",
+    "query": "Do we have MacBook Pro 16 inch in Chicago warehouse?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.6146,
+    "laya_latency_ms": 53.5,
+    "llm_tool": null,
+    "llm_latency_ms": 355.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1476,
+      "completion_tokens": 55,
+      "total_tokens": 1531
+    },
+    "laya_usage": {
+      "prompt_tokens": 32,
+      "completion_tokens": 50,
+      "total_tokens": 82
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.6,
+    "baseline_cost_usd": 6.4e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 355.0
+    },
+    "laya_latency": {
+      "routing_ms": 53.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 150.0,
+      "total_ms": 203.5
+    },
+    "latency_saved_ms": 151.5,
+    "speedup_factor": 1.74,
+    "routing_speedup_factor": 6.6,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "f154f948",
+    "timestamp": "2026-10-04T00:55:17.517507",
+    "query": "Can you look up customer record for john.doe@example.com?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.14,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 679.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3093,
+      "completion_tokens": 110,
+      "total_tokens": 3203
+    },
+    "laya_usage": {
+      "prompt_tokens": 419,
+      "completion_tokens": 100,
+      "total_tokens": 519
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 83.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 0.63,
+      "synthesis_ms": 327.2,
+      "total_ms": 679.8
+    },
+    "laya_latency": {
+      "routing_ms": 57.14,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 232.0,
+      "total_ms": 289.3
+    },
+    "latency_saved_ms": 390.5,
+    "speedup_factor": 2.35,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "ee553f89",
+    "timestamp": "2026-10-04T00:55:17.575742",
+    "query": "Please refund $45 for order #ORD-1234 because item was broken",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 54.76,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 685.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3100,
+      "completion_tokens": 110,
+      "total_tokens": 3210
+    },
+    "laya_usage": {
+      "prompt_tokens": 564,
+      "completion_tokens": 100,
+      "total_tokens": 664
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 79.3,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.37,
+      "synthesis_ms": 329.6,
+      "total_ms": 685.0
+    },
+    "laya_latency": {
+      "routing_ms": 54.76,
+      "tool_exec_ms": 0.18,
+      "synthesis_ms": 233.5,
+      "total_ms": 288.4
+    },
+    "latency_saved_ms": 396.6,
+    "speedup_factor": 2.38,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-907595\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-907595\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "56abffe2",
+    "timestamp": "2026-10-04T00:55:17.633874",
+    "query": "Send email to sarah@acme.com letting her know contract is signed",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "send_email_notification",
+    "laya_confidence": 0.9959,
+    "laya_latency_ms": 54.81,
+    "llm_tool": "send_email_notification",
+    "llm_latency_ms": 669.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3080,
+      "completion_tokens": 110,
+      "total_tokens": 3190
+    },
+    "laya_usage": {
+      "prompt_tokens": 488,
+      "completion_tokens": 100,
+      "total_tokens": 588
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.6,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.38,
+      "synthesis_ms": 313.6,
+      "total_ms": 669.0
+    },
+    "laya_latency": {
+      "routing_ms": 54.81,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 223.5,
+      "total_ms": 278.5
+    },
+    "latency_saved_ms": 390.5,
+    "speedup_factor": 2.4,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "send_email_notification",
+    "tool_output": "Email Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay",
+    "response_text": "Here is the requested information:\n\nEmail Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay"
+  },
+  {
+    "id": "5a704622",
+    "timestamp": "2026-10-04T00:55:17.694100",
+    "query": "Hello, how are you doing today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9966,
+    "laya_latency_ms": 56.11,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 56.11,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 202.1
+    },
+    "latency_saved_ms": 146.9,
+    "speedup_factor": 1.73,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "5b1b09cf",
+    "timestamp": "2026-10-04T00:55:17.947137",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of $189.50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 249.38,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 803.7,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3294,
+      "completion_tokens": 110,
+      "total_tokens": 3404
+    },
+    "laya_usage": {
+      "prompt_tokens": 758,
+      "completion_tokens": 100,
+      "total_tokens": 858
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.8,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 0.46,
+      "synthesis_ms": 331.2,
+      "total_ms": 803.7
+    },
+    "laya_latency": {
+      "routing_ms": 249.38,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 234.5,
+      "total_ms": 484.0
+    },
+    "latency_saved_ms": 319.7,
+    "speedup_factor": 1.66,
+    "routing_speedup_factor": 1.9,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-297607\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-297607\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "308b1401",
+    "timestamp": "2026-10-04T00:55:18.050922",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 99.67,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 782.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.39,
+      "synthesis_ms": 336.0,
+      "total_ms": 782.9
+    },
+    "laya_latency": {
+      "routing_ms": 99.67,
+      "tool_exec_ms": 0.19,
+      "synthesis_ms": 237.5,
+      "total_ms": 337.4
+    },
+    "latency_saved_ms": 445.5,
+    "speedup_factor": 2.32,
+    "routing_speedup_factor": 4.5,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "26d9c9e1",
+    "timestamp": "2026-10-04T00:55:18.128832",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9996,
+    "laya_latency_ms": 73.22,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 720.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.38,
+      "synthesis_ms": 285.6,
+      "total_ms": 720.5
+    },
+    "laya_latency": {
+      "routing_ms": 73.22,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 206.0,
+      "total_ms": 279.4
+    },
+    "latency_saved_ms": 441.1,
+    "speedup_factor": 2.58,
+    "routing_speedup_factor": 5.9,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "33a37143",
+    "timestamp": "2026-10-04T00:55:18.200980",
+    "query": "We are preparing for the upcoming Q4 enterprise sales push and several regional distributors are asking for large allocations of the MacBook Pro 16 inch M3 units. Before we accept these non-refundable purchase orders, can you check the current available stock across our central fulfillment facilities, specifically Chicago, and verify if there are any pending restock shipments scheduled to arrive this month?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.9895,
+    "laya_latency_ms": 68.68,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 757.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 110,
+      "total_tokens": 3321
+    },
+    "laya_usage": {
+      "prompt_tokens": 635,
+      "completion_tokens": 100,
+      "total_tokens": 735
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 77.9,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 433.0,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 324.0,
+      "total_ms": 757.4
+    },
+    "laya_latency": {
+      "routing_ms": 68.68,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 230.0,
+      "total_ms": 298.8
+    },
+    "latency_saved_ms": 458.6,
+    "speedup_factor": 2.53,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-98326\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-98326\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "e8fc4e7a",
+    "timestamp": "2026-10-04T00:55:18.274653",
+    "query": "We just received an urgent inbound ticket from an individual claiming to be the Chief Technology Officer at Nexus Global. His email is listed as john.doe@example.com. Before I jump on a live Zoom call with him to address his concerns, could you pull up his full CRM account record, subscription tier, total lifetime spend, and identify who their assigned enterprise account manager is?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 0.9803,
+    "laya_latency_ms": 70.33,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 762.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3216,
+      "completion_tokens": 110,
+      "total_tokens": 3326
+    },
+    "laya_usage": {
+      "prompt_tokens": 542,
+      "completion_tokens": 100,
+      "total_tokens": 642
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.5e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.28,
+      "synthesis_ms": 328.0,
+      "total_ms": 762.8
+    },
+    "laya_latency": {
+      "routing_ms": 70.33,
+      "tool_exec_ms": 0.13,
+      "synthesis_ms": 232.5,
+      "total_ms": 303.0
+    },
+    "latency_saved_ms": 459.8,
+    "speedup_factor": 2.52,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "8643ab93",
+    "timestamp": "2026-10-04T00:55:18.337108",
+    "query": "We just finished a team dinner with 8 colleagues at a downtown restaurant. The food subtotal was $432.50, and we need to calculate an 18% gratuity on that amount. Could you calculate what 18% tip on $432.50 is so we can finalize our expense report?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9999,
+    "laya_latency_ms": 59.02,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 675.1,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 110,
+      "total_tokens": 3224
+    },
+    "laya_usage": {
+      "prompt_tokens": 446,
+      "completion_tokens": 100,
+      "total_tokens": 546
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 83.1,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.2e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 407.5,
+      "tool_exec_ms": 0.37,
+      "synthesis_ms": 267.2,
+      "total_ms": 675.1
+    },
+    "laya_latency": {
+      "routing_ms": 59.02,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 194.5,
+      "total_ms": 253.7
+    },
+    "latency_saved_ms": 421.4,
+    "speedup_factor": 2.66,
+    "routing_speedup_factor": 6.9,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 8 = 8",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 8 = 8"
+  },
+  {
+    "id": "b7ebd201",
+    "timestamp": "2026-10-04T00:55:18.406232",
+    "query": "Good morning HR team. My spouse and I are expecting our second child in November. Could you search our company knowledge base to verify the exact paid parental leave policy duration and whether it can be taken in split blocks across the year?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.991,
+    "laya_latency_ms": 59.63,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 717.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3141,
+      "completion_tokens": 110,
+      "total_tokens": 3251
+    },
+    "laya_usage": {
+      "prompt_tokens": 549,
+      "completion_tokens": 100,
+      "total_tokens": 649
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 80.0,
+    "baseline_cost_usd": 0.000134,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 404.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 312.8,
+      "total_ms": 717.6
+    },
+    "laya_latency": {
+      "routing_ms": 59.63,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 223.0,
+      "total_ms": 282.8
+    },
+    "latency_saved_ms": 434.8,
+    "speedup_factor": 2.54,
+    "routing_speedup_factor": 6.8,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "983c050b",
+    "timestamp": "2026-10-04T00:55:18.476238",
+    "query": "Good afternoon! I have been reflecting on our quarterly agent architecture reviews. We have been looking at how microservices communicate, whether we need dedicated API gateways, how cost optimization plays into production deployments, and how teams coordinate across frontend and backend. Just wanted to say hello and see what your thoughts are on general software engineering best practices for building scalable distributed systems.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9405,
+    "laya_latency_ms": 66.98,
+    "llm_tool": null,
+    "llm_latency_ms": 434.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1536,
+      "completion_tokens": 55,
+      "total_tokens": 1591
+    },
+    "laya_usage": {
+      "prompt_tokens": 92,
+      "completion_tokens": 50,
+      "total_tokens": 142
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 91.1,
+    "baseline_cost_usd": 6.6e-05,
+    "laya_cost_usd": 1.1e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 434.5
+    },
+    "laya_latency": {
+      "routing_ms": 66.98,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 203.0,
+      "total_ms": 270.0
+    },
+    "latency_saved_ms": 164.5,
+    "speedup_factor": 1.61,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "ff2a6eec",
+    "timestamp": "2026-10-04T00:55:56.886185",
+    "query": "warmup",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.904,
+    "laya_latency_ms": 80.25,
+    "llm_tool": null,
+    "llm_latency_ms": 341.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1466,
+      "completion_tokens": 55,
+      "total_tokens": 1521
+    },
+    "laya_usage": {
+      "prompt_tokens": 22,
+      "completion_tokens": 50,
+      "total_tokens": 72
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 95.3,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 8e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 341.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 341.5
+    },
+    "laya_latency": {
+      "routing_ms": 80.25,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 141.0,
+      "total_ms": 221.2
+    },
+    "latency_saved_ms": 120.3,
+    "speedup_factor": 1.54,
+    "routing_speedup_factor": 4.3,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "51b8f416",
+    "timestamp": "2026-10-04T00:55:56.955945",
+    "query": "Calculate 15% tip on a $120 dinner bill",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9927,
+    "laya_latency_ms": 55.56,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 631.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3017,
+      "completion_tokens": 110,
+      "total_tokens": 3127
+    },
+    "laya_usage": {
+      "prompt_tokens": 349,
+      "completion_tokens": 100,
+      "total_tokens": 449
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 85.6,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 2.8e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 10.32,
+      "synthesis_ms": 269.6,
+      "total_ms": 631.9
+    },
+    "laya_latency": {
+      "routing_ms": 55.56,
+      "tool_exec_ms": 0.19,
+      "synthesis_ms": 196.0,
+      "total_ms": 251.8
+    },
+    "latency_saved_ms": 380.1,
+    "speedup_factor": 2.51,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 15% = 0.15",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 15% = 0.15"
+  },
+  {
+    "id": "84b7c78a",
+    "timestamp": "2026-10-04T00:55:57.043319",
+    "query": "Will it rain tomorrow in Seattle?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "get_weather",
+    "laya_confidence": 0.8428,
+    "laya_latency_ms": 83.57,
+    "llm_tool": "get_weather",
+    "llm_latency_ms": 640.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3036,
+      "completion_tokens": 110,
+      "total_tokens": 3146
+    },
+    "laya_usage": {
+      "prompt_tokens": 426,
+      "completion_tokens": 100,
+      "total_tokens": 526
+    },
+    "tokens_saved": 2620,
+    "savings_percentage": 83.3,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 291.2,
+      "total_ms": 640.5
+    },
+    "laya_latency": {
+      "routing_ms": 83.57,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 209.5,
+      "total_ms": 293.2
+    },
+    "latency_saved_ms": 347.3,
+    "speedup_factor": 2.18,
+    "routing_speedup_factor": 4.2,
+    "tool_executed": "get_weather",
+    "tool_output": "Weather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow.",
+    "response_text": "Here is the requested information:\n\nWeather Report for Seattle (1-day outlook):\n58\u00b0F (14\u00b0C), Light Rain, Humidity 82%, Wind 9 mph SW. Forecast: 60% chance of showers tomorrow."
+  },
+  {
+    "id": "642f1715",
+    "timestamp": "2026-10-04T00:55:57.102078",
+    "query": "Please search our internal knowledge base for company parental leave policy",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 55.2,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 669.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 479,
+      "completion_tokens": 100,
+      "total_tokens": 579
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 356.5,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 312.8,
+      "total_ms": 669.6
+    },
+    "laya_latency": {
+      "routing_ms": 55.2,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 223.0,
+      "total_ms": 278.3
+    },
+    "latency_saved_ms": 391.3,
+    "speedup_factor": 2.41,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "d60b1ba0",
+    "timestamp": "2026-10-04T00:55:57.163271",
+    "query": "Where is my package for order #ORD-98214?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_order_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 57.33,
+    "llm_tool": "check_order_status",
+    "llm_latency_ms": 662.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3071,
+      "completion_tokens": 110,
+      "total_tokens": 3181
+    },
+    "laya_usage": {
+      "prompt_tokens": 405,
+      "completion_tokens": 100,
+      "total_tokens": 505
+    },
+    "tokens_saved": 2676,
+    "savings_percentage": 84.1,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 311.2,
+      "total_ms": 662.0
+    },
+    "laya_latency": {
+      "routing_ms": 57.33,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 222.0,
+      "total_ms": 279.5
+    },
+    "latency_saved_ms": 382.5,
+    "speedup_factor": 2.37,
+    "routing_speedup_factor": 6.1,
+    "tool_executed": "check_order_status",
+    "tool_output": "Order Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-722887965)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required",
+    "response_text": "Here is the requested information:\n\nOrder Status for ORD-98214:\n- Status: Out for Delivery (Scheduled by 4:30 PM Today)\n- Carrier: FedEx Express (Tracking #FX-722887965)\n- Items: 2 items (Standard Express Shipping)\n- Destination: Customer Delivery Address on file\n- Delivery Signature: Not Required"
+  },
+  {
+    "id": "4c50ba63",
+    "timestamp": "2026-10-04T00:55:57.223545",
+    "query": "Has United Airlines flight UA412 landed yet?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 55.97,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 686.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3096,
+      "completion_tokens": 110,
+      "total_tokens": 3206
+    },
+    "laya_usage": {
+      "prompt_tokens": 432,
+      "completion_tokens": 100,
+      "total_tokens": 532
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 83.4,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 350.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 336.0,
+      "total_ms": 686.8
+    },
+    "laya_latency": {
+      "routing_ms": 55.97,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 237.5,
+      "total_ms": 293.6
+    },
+    "latency_saved_ms": 393.2,
+    "speedup_factor": 2.34,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "6265d919",
+    "timestamp": "2026-10-04T00:55:57.282617",
+    "query": "How much is 250 Euros in US Dollars today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 55.17,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 639.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3037,
+      "completion_tokens": 110,
+      "total_tokens": 3147
+    },
+    "laya_usage": {
+      "prompt_tokens": 513,
+      "completion_tokens": 100,
+      "total_tokens": 613
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 80.5,
+    "baseline_cost_usd": 0.00013,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 353.5,
+      "tool_exec_ms": 0.35,
+      "synthesis_ms": 285.6,
+      "total_ms": 639.5
+    },
+    "laya_latency": {
+      "routing_ms": 55.17,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 206.0,
+      "total_ms": 261.3
+    },
+    "latency_saved_ms": 378.2,
+    "speedup_factor": 2.45,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n250.00 EUR = 272.50 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "471883ef",
+    "timestamp": "2026-10-04T00:55:57.344204",
+    "query": "Do we have MacBook Pro 16 inch in Chicago warehouse?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.7125,
+    "laya_latency_ms": 57.68,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 679.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3087,
+      "completion_tokens": 110,
+      "total_tokens": 3197
+    },
+    "laya_usage": {
+      "prompt_tokens": 511,
+      "completion_tokens": 100,
+      "total_tokens": 611
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 80.9,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.4e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.37,
+      "synthesis_ms": 324.0,
+      "total_ms": 679.4
+    },
+    "laya_latency": {
+      "routing_ms": 57.68,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 230.0,
+      "total_ms": 287.8
+    },
+    "latency_saved_ms": 391.6,
+    "speedup_factor": 2.36,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-53513\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-53513\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "00c4c969",
+    "timestamp": "2026-10-04T00:55:57.467361",
+    "query": "Can you look up customer record for john.doe@example.com?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 119.06,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 679.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3093,
+      "completion_tokens": 110,
+      "total_tokens": 3203
+    },
+    "laya_usage": {
+      "prompt_tokens": 419,
+      "completion_tokens": 100,
+      "total_tokens": 519
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 83.8,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.1e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 352.0,
+      "tool_exec_ms": 0.38,
+      "synthesis_ms": 327.2,
+      "total_ms": 679.6
+    },
+    "laya_latency": {
+      "routing_ms": 119.06,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 232.0,
+      "total_ms": 351.2
+    },
+    "latency_saved_ms": 328.4,
+    "speedup_factor": 1.94,
+    "routing_speedup_factor": 3.0,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "52a494e9",
+    "timestamp": "2026-10-04T00:55:57.526985",
+    "query": "Please refund $45 for order #ORD-1234 because item was broken",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 55.56,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 685.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3100,
+      "completion_tokens": 110,
+      "total_tokens": 3210
+    },
+    "laya_usage": {
+      "prompt_tokens": 564,
+      "completion_tokens": 100,
+      "total_tokens": 664
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 79.3,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.36,
+      "synthesis_ms": 329.6,
+      "total_ms": 685.0
+    },
+    "laya_latency": {
+      "routing_ms": 55.56,
+      "tool_exec_ms": 0.18,
+      "synthesis_ms": 233.5,
+      "total_ms": 289.2
+    },
+    "latency_saved_ms": 395.8,
+    "speedup_factor": 2.37,
+    "routing_speedup_factor": 6.4,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-550395\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-550395\n- Order ID: ORD-1234\n- Amount Credited: $45.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "b8c4a884",
+    "timestamp": "2026-10-04T00:55:57.585339",
+    "query": "Send email to sarah@acme.com letting her know contract is signed",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "send_email_notification",
+    "laya_confidence": 0.9987,
+    "laya_latency_ms": 54.07,
+    "llm_tool": "send_email_notification",
+    "llm_latency_ms": 668.9,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3080,
+      "completion_tokens": 110,
+      "total_tokens": 3190
+    },
+    "laya_usage": {
+      "prompt_tokens": 488,
+      "completion_tokens": 100,
+      "total_tokens": 588
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 81.6,
+    "baseline_cost_usd": 0.000132,
+    "laya_cost_usd": 3.3e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 355.0,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 313.6,
+      "total_ms": 668.9
+    },
+    "laya_latency": {
+      "routing_ms": 54.07,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 223.5,
+      "total_ms": 277.7
+    },
+    "latency_saved_ms": 391.2,
+    "speedup_factor": 2.41,
+    "routing_speedup_factor": 6.6,
+    "tool_executed": "send_email_notification",
+    "tool_output": "Email Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay",
+    "response_text": "Here is the requested information:\n\nEmail Dispatch Confirmation:\n- Recipient: sarah@acme.com\n- Subject: Regarding your recent inquiry\n- Delivery Status: 250 OK - Message accepted for delivery\n- Message Preview: \"Send email to sarah@acme.com letting her know contract is signed\"\n- Timestamp: Sent successfully via Acme SMTP Relay"
+  },
+  {
+    "id": "21091b6b",
+    "timestamp": "2026-10-04T00:55:57.642131",
+    "query": "Hello, how are you doing today?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9932,
+    "laya_latency_ms": 53.29,
+    "llm_tool": null,
+    "llm_latency_ms": 349.0,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1472,
+      "completion_tokens": 55,
+      "total_tokens": 1527
+    },
+    "laya_usage": {
+      "prompt_tokens": 28,
+      "completion_tokens": 50,
+      "total_tokens": 78
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 94.9,
+    "baseline_cost_usd": 6.3e-05,
+    "laya_cost_usd": 9e-06,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 349.0,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 349.0
+    },
+    "laya_latency": {
+      "routing_ms": 53.29,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 146.0,
+      "total_ms": 199.3
+    },
+    "latency_saved_ms": 149.7,
+    "speedup_factor": 1.75,
+    "routing_speedup_factor": 6.5,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  },
+  {
+    "id": "26eea6b0",
+    "timestamp": "2026-10-04T00:55:57.725015",
+    "query": "Hi team, I am writing to you regarding order #ORD-98412 placed on September 28th. I received the package yesterday afternoon, but upon unboxing the delivered shipment, the glass display was completely shattered and unusable. I spoke with your phone representative Sarah earlier, who advised me to reach out here. Given the product arrived damaged through no fault of my own, I would like to request an immediate full refund of $189.50 back to my Visa credit card ending in 4102. Please confirm once the credit has been processed.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "refund_transaction",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 78.34,
+    "llm_tool": "refund_transaction",
+    "llm_latency_ms": 803.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3294,
+      "completion_tokens": 110,
+      "total_tokens": 3404
+    },
+    "laya_usage": {
+      "prompt_tokens": 758,
+      "completion_tokens": 100,
+      "total_tokens": 858
+    },
+    "tokens_saved": 2546,
+    "savings_percentage": 74.8,
+    "baseline_cost_usd": 0.00014,
+    "laya_cost_usd": 4.3e-05,
+    "cost_saved_usd": 9.7e-05,
+    "baseline_latency": {
+      "routing_ms": 472.0,
+      "tool_exec_ms": 0.34,
+      "synthesis_ms": 331.2,
+      "total_ms": 803.5
+    },
+    "laya_latency": {
+      "routing_ms": 78.34,
+      "tool_exec_ms": 0.21,
+      "synthesis_ms": 234.5,
+      "total_ms": 313.1
+    },
+    "latency_saved_ms": 490.4,
+    "speedup_factor": 2.57,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": "refund_transaction",
+    "tool_output": "Refund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-208823\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days",
+    "response_text": "Here is the requested information:\n\nRefund Confirmation:\n- Status: APPROVED & PROCESSED\n- Refund ID: REF-208823\n- Order ID: ORD-98412\n- Amount Credited: $98,412.00 USD\n- Reason Logged: 'Customer request / damaged item'\n- Payment Method: Original Credit Card (ending in 4092)\n- Processing Timeline: Credited to customer statement within 2-3 business days"
+  },
+  {
+    "id": "974cbe7f",
+    "timestamp": "2026-10-04T00:55:57.804259",
+    "query": "Urgent assistance needed: Our executive leadership delegation is currently transiting through Chicago O'Hare for the annual tech summit. One of our key keynote speakers is scheduled on flight UA412 coming in from San Francisco. Due to adverse weather reported over the Midwest, our ground chauffeur team needs to know if UA412 has experienced any gate changes or landing delays, and what specific arrival terminal and baggage carousel they should proceed to.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_flight_status",
+    "laya_confidence": 1.0,
+    "laya_latency_ms": 74.61,
+    "llm_tool": "check_flight_status",
+    "llm_latency_ms": 782.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3248,
+      "completion_tokens": 110,
+      "total_tokens": 3358
+    },
+    "laya_usage": {
+      "prompt_tokens": 584,
+      "completion_tokens": 100,
+      "total_tokens": 684
+    },
+    "tokens_saved": 2674,
+    "savings_percentage": 79.6,
+    "baseline_cost_usd": 0.000138,
+    "laya_cost_usd": 3.7e-05,
+    "cost_saved_usd": 0.000101,
+    "baseline_latency": {
+      "routing_ms": 446.5,
+      "tool_exec_ms": 0.31,
+      "synthesis_ms": 336.0,
+      "total_ms": 782.8
+    },
+    "laya_latency": {
+      "routing_ms": 74.61,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 237.5,
+      "total_ms": 312.3
+    },
+    "latency_saved_ms": 470.5,
+    "speedup_factor": 2.51,
+    "routing_speedup_factor": 6.0,
+    "tool_executed": "check_flight_status",
+    "tool_output": "Flight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4",
+    "response_text": "Here is the requested information:\n\nFlight Information for UA412:\n- Status: On Time (En Route)\n- Route: San Francisco (SFO) -> Chicago O'Hare (ORD)\n- Scheduled Departure: 1:15 PM PDT (Actual: 1:18 PM PDT)\n- Scheduled Arrival: 7:22 PM CDT (Estimated: 7:15 PM CDT)\n- Arrival Terminal: Terminal 1, Gate B14\n- Baggage Claim: Carousel 4"
+  },
+  {
+    "id": "b75d477c",
+    "timestamp": "2026-10-04T00:55:57.877367",
+    "query": "Our European supply chain vendor just sent an invoice of 48,500 EUR for raw manufacturing materials, with a 3% early-payment discount applicable if settled within 10 days. Before our Treasury department initiates the wire transfer from our US operating bank account, we need to know the current market exchange rate and exactly how much this 48,500 EUR payment translates to in US Dollars.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "convert_currency",
+    "laya_confidence": 0.9997,
+    "laya_latency_ms": 68.75,
+    "llm_tool": "convert_currency",
+    "llm_latency_ms": 720.4,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3171,
+      "completion_tokens": 110,
+      "total_tokens": 3281
+    },
+    "laya_usage": {
+      "prompt_tokens": 647,
+      "completion_tokens": 100,
+      "total_tokens": 747
+    },
+    "tokens_saved": 2534,
+    "savings_percentage": 77.2,
+    "baseline_cost_usd": 0.000135,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.6e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.31,
+      "synthesis_ms": 285.6,
+      "total_ms": 720.4
+    },
+    "laya_latency": {
+      "routing_ms": 68.75,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 206.0,
+      "total_ms": 274.9
+    },
+    "latency_saved_ms": 445.5,
+    "speedup_factor": 2.62,
+    "routing_speedup_factor": 6.3,
+    "tool_executed": "convert_currency",
+    "tool_output": "Currency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)",
+    "response_text": "Here is the requested information:\n\nCurrency Conversion:\n48.00 EUR = 52.32 USD\nExchange Rate: 1 EUR = 1.0900 USD (Market midpoint rate)"
+  },
+  {
+    "id": "12a502db",
+    "timestamp": "2026-10-04T00:55:57.951263",
+    "query": "We are preparing for the upcoming Q4 enterprise sales push and several regional distributors are asking for large allocations of the MacBook Pro 16 inch M3 units. Before we accept these non-refundable purchase orders, can you check the current available stock across our central fulfillment facilities, specifically Chicago, and verify if there are any pending restock shipments scheduled to arrive this month?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "check_inventory_stock",
+    "laya_confidence": 0.9807,
+    "laya_latency_ms": 70.0,
+    "llm_tool": "check_inventory_stock",
+    "llm_latency_ms": 757.3,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3211,
+      "completion_tokens": 110,
+      "total_tokens": 3321
+    },
+    "laya_usage": {
+      "prompt_tokens": 635,
+      "completion_tokens": 100,
+      "total_tokens": 735
+    },
+    "tokens_saved": 2586,
+    "savings_percentage": 77.9,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.9e-05,
+    "cost_saved_usd": 9.8e-05,
+    "baseline_latency": {
+      "routing_ms": 433.0,
+      "tool_exec_ms": 0.33,
+      "synthesis_ms": 324.0,
+      "total_ms": 757.3
+    },
+    "laya_latency": {
+      "routing_ms": 70.0,
+      "tool_exec_ms": 0.16,
+      "synthesis_ms": 230.0,
+      "total_ms": 300.2
+    },
+    "latency_saved_ms": 457.1,
+    "speedup_factor": 2.52,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "check_inventory_stock",
+    "tool_output": "Inventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-53513\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday",
+    "response_text": "Here is the requested information:\n\nInventory Stock Report for 'MacBook Pro 16 inch':\n- SKU: SKU-53513\n- Total Available Quantity: 28 units\n- Reserved / Pending Shipments: 4 units\n- Location Distribution: Chicago Warehouse (18 units), Dallas Warehouse (10 units)\n- Status: In Stock (Ready for immediate fulfillment)\n- Next Incoming Restock: +50 units scheduled for next Tuesday"
+  },
+  {
+    "id": "704acc6b",
+    "timestamp": "2026-10-04T00:55:58.025986",
+    "query": "We just received an urgent inbound ticket from an individual claiming to be the Chief Technology Officer at Nexus Global. His email is listed as john.doe@example.com. Before I jump on a live Zoom call with him to address his concerns, could you pull up his full CRM account record, subscription tier, total lifetime spend, and identify who their assigned enterprise account manager is?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "lookup_customer_crm",
+    "laya_confidence": 0.9751,
+    "laya_latency_ms": 70.52,
+    "llm_tool": "lookup_customer_crm",
+    "llm_latency_ms": 762.8,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3216,
+      "completion_tokens": 110,
+      "total_tokens": 3326
+    },
+    "laya_usage": {
+      "prompt_tokens": 542,
+      "completion_tokens": 100,
+      "total_tokens": 642
+    },
+    "tokens_saved": 2684,
+    "savings_percentage": 80.7,
+    "baseline_cost_usd": 0.000137,
+    "laya_cost_usd": 3.5e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.32,
+      "synthesis_ms": 328.0,
+      "total_ms": 762.8
+    },
+    "laya_latency": {
+      "routing_ms": 70.52,
+      "tool_exec_ms": 0.14,
+      "synthesis_ms": 232.5,
+      "total_ms": 303.2
+    },
+    "latency_saved_ms": 459.6,
+    "speedup_factor": 2.52,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": "lookup_customer_crm",
+    "tool_output": "CRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)",
+    "response_text": "Here is the requested information:\n\nCRM Customer Profile for 'john.doe@example.com.':\n- Customer ID: CUST-78219\n- Name: Johnathan Doe\n- Email: john.doe@example.com.\n- Account Tier: Enterprise Gold (Member since 2022)\n- Lifetime Value (LTV): $18,450.00\n- Open Support Tickets: 0\n- Account Executive: Sarah Jenkins (East Coast Enterprise Team)"
+  },
+  {
+    "id": "abb58da5",
+    "timestamp": "2026-10-04T00:55:58.093585",
+    "query": "We just finished a team dinner with 8 colleagues at a downtown restaurant. The food subtotal was $432.50, and we need to calculate an 18% gratuity on that amount. Could you calculate what 18% tip on $432.50 is so we can finalize our expense report?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "calculator",
+    "laya_confidence": 0.9999,
+    "laya_latency_ms": 59.63,
+    "llm_tool": "calculator",
+    "llm_latency_ms": 675.1,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3114,
+      "completion_tokens": 110,
+      "total_tokens": 3224
+    },
+    "laya_usage": {
+      "prompt_tokens": 446,
+      "completion_tokens": 100,
+      "total_tokens": 546
+    },
+    "tokens_saved": 2678,
+    "savings_percentage": 83.1,
+    "baseline_cost_usd": 0.000133,
+    "laya_cost_usd": 3.2e-05,
+    "cost_saved_usd": 0.000102,
+    "baseline_latency": {
+      "routing_ms": 407.5,
+      "tool_exec_ms": 0.41,
+      "synthesis_ms": 267.2,
+      "total_ms": 675.1
+    },
+    "laya_latency": {
+      "routing_ms": 59.63,
+      "tool_exec_ms": 0.17,
+      "synthesis_ms": 194.5,
+      "total_ms": 254.3
+    },
+    "latency_saved_ms": 420.8,
+    "speedup_factor": 2.65,
+    "routing_speedup_factor": 6.8,
+    "tool_executed": "calculator",
+    "tool_output": "Calculation Result: 8 = 8",
+    "response_text": "Here is the requested information:\n\nCalculation Result: 8 = 8"
+  },
+  {
+    "id": "67c33eff",
+    "timestamp": "2026-10-04T00:55:58.156321",
+    "query": "Good morning HR team. My spouse and I are expecting our second child in November. Could you search our company knowledge base to verify the exact paid parental leave policy duration and whether it can be taken in split blocks across the year?",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": "search_knowledge_base",
+    "laya_confidence": 0.9968,
+    "laya_latency_ms": 58.61,
+    "llm_tool": "search_knowledge_base",
+    "llm_latency_ms": 717.6,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 3141,
+      "completion_tokens": 110,
+      "total_tokens": 3251
+    },
+    "laya_usage": {
+      "prompt_tokens": 549,
+      "completion_tokens": 100,
+      "total_tokens": 649
+    },
+    "tokens_saved": 2602,
+    "savings_percentage": 80.0,
+    "baseline_cost_usd": 0.000134,
+    "laya_cost_usd": 3.6e-05,
+    "cost_saved_usd": 9.9e-05,
+    "baseline_latency": {
+      "routing_ms": 404.5,
+      "tool_exec_ms": 0.3,
+      "synthesis_ms": 312.8,
+      "total_ms": 717.6
+    },
+    "laya_latency": {
+      "routing_ms": 58.61,
+      "tool_exec_ms": 0.15,
+      "synthesis_ms": 223.0,
+      "total_ms": 281.8
+    },
+    "latency_saved_ms": 435.8,
+    "speedup_factor": 2.55,
+    "routing_speedup_factor": 6.9,
+    "tool_executed": "search_knowledge_base",
+    "tool_output": "Knowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months.",
+    "response_text": "Here is the requested information:\n\nKnowledge Base Result [HR]:\nHR Policy Section 4.2 - Parental Leave: Full-time employees are eligible for up to 16 weeks of 100% paid parental leave for the birth, adoption, or foster placement of a child. Leave can be taken continuously or in two separate blocks within the first 12 months."
+  },
+  {
+    "id": "a9be7d53",
+    "timestamp": "2026-10-04T00:55:58.229694",
+    "query": "Good afternoon! I have been reflecting on our quarterly agent architecture reviews. We have been looking at how microservices communicate, whether we need dedicated API gateways, how cost optimization plays into production deployments, and how teams coordinate across frontend and backend. Just wanted to say hello and see what your thoughts are on general software engineering best practices for building scalable distributed systems.",
+    "mode": "dual_benchmark",
+    "model": "gemini-1.5-flash-8b",
+    "laya_tool": null,
+    "laya_confidence": 0.9415,
+    "laya_latency_ms": 69.92,
+    "llm_tool": null,
+    "llm_latency_ms": 434.5,
+    "tool_agreement": true,
+    "baseline_usage": {
+      "prompt_tokens": 1536,
+      "completion_tokens": 55,
+      "total_tokens": 1591
+    },
+    "laya_usage": {
+      "prompt_tokens": 92,
+      "completion_tokens": 50,
+      "total_tokens": 142
+    },
+    "tokens_saved": 1449,
+    "savings_percentage": 91.1,
+    "baseline_cost_usd": 6.6e-05,
+    "laya_cost_usd": 1.1e-05,
+    "cost_saved_usd": 5.5e-05,
+    "baseline_latency": {
+      "routing_ms": 434.5,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 0.0,
+      "total_ms": 434.5
+    },
+    "laya_latency": {
+      "routing_ms": 69.92,
+      "tool_exec_ms": 0.0,
+      "synthesis_ms": 203.0,
+      "total_ms": 272.9
+    },
+    "latency_saved_ms": 161.6,
+    "speedup_factor": 1.59,
+    "routing_speedup_factor": 6.2,
+    "tool_executed": null,
+    "tool_output": null,
+    "response_text": "Hello! I'm here to assist you. How can I help you today?"
+  }
+]
