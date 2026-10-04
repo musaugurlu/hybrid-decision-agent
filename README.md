@@ -164,8 +164,8 @@ The project features a **Chainlit** chat interface providing visual, real-time c
 ### 2. Clone and Setup Environment
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/laya-gemini-decision-agent.git
-cd laya-gemini-decision-agent
+git clone https://github.com/musaugurlu/hybrid-decision-agent.git
+cd hybrid-decision-agent
 
 # Create and activate virtual environment
 python3 -m venv .venv
